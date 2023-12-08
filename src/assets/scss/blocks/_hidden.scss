@@ -1,0 +1,14 @@
+/* Hidden */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+    -webkit-clip-path: circle(0);
+    clip-path: circle(0);
+}
+
+.visibility-hidden {
+    visibility: hidden;
+}

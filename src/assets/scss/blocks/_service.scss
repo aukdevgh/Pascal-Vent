@@ -1,0 +1,43 @@
+.service {
+    max-width: 340px;
+    height: 100%;
+
+    margin-left: 40px;
+
+    display: flex;
+
+    @media screen and (max-width: 1300px) {
+        height: auto;
+
+        margin: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin: 20px;
+    }
+}
+
+.service__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+.service__item {
+    display: flex;
+    gap: 15px;
+}
+
+.service__icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    background-color: $white;
+    border-radius: $radius-10;
+}

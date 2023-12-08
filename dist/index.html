@@ -1,0 +1,2273 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <title>Pascal Vent</title>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <svg style="display: none">
+            <symbol id="next-icon" viewbox="0 0 34 34">
+                <g>
+                    <path
+                        d="M22.1802 18.1514C22.0974 18.2342 22.0065 18.3042 21.9119 18.3651L15.5318 24.7452C15.2219 25.0553 14.8157 25.2102 14.4095 25.2102C14.0034 25.2102 13.5974 25.0553 13.2873 24.7452C12.6674 24.1253 12.6674 23.12 13.2873 22.5003L18.785 17.0018L13.315 11.5318C12.695 10.9115 12.695 9.90658 13.315 9.28687C13.9349 8.66694 14.9399 8.66728 15.5599 9.28653L21.9118 15.6381C22.0064 15.6989 22.0973 15.7689 22.1798 15.8518C22.4967 16.1687 22.6496 16.5861 22.6424 17.0017C22.6499 17.4171 22.4973 17.8342 22.1802 18.1514Z"
+                    ></path>
+                </g>
+            </symbol>
+            <symbol id="prev-icon" viewbox="0 0 34 34">
+                <g>
+                    <path
+                        d="M11.8198 18.1514C11.9026 18.2342 11.9935 18.3042 12.0881 18.3651L18.4682 24.7452C18.7781 25.0553 19.1843 25.2102 19.5905 25.2102C19.9966 25.2102 20.4026 25.0553 20.7127 24.7452C21.3326 24.1253 21.3326 23.12 20.7127 22.5003L15.215 17.0018L20.685 11.5318C21.305 10.9115 21.305 9.90658 20.685 9.28687C20.0651 8.66694 19.0601 8.66728 18.4401 9.28653L12.0882 15.6381C11.9936 15.6989 11.9027 15.7689 11.8202 15.8518C11.5033 16.1687 11.3504 16.5861 11.3576 17.0017C11.3501 17.4171 11.5027 17.8342 11.8198 18.1514Z"
+                    ></path>
+                </g>
+            </symbol>
+            <symbol id="conditioner" viewbox="0 0 33 27">
+                <g clip-path="url(#clip0_77_1280)">
+                    <path
+                        d="M30.0996 0H2.90039C1.30105 0 0 1.29767 0 2.89286V12.5357C0 14.1309 1.30105 15.4286 2.90039 15.4286H30.0996C31.6989 15.4286 33 14.1309 33 12.5357V2.89286C33 1.29767 31.6989 0 30.0996 0ZM24.2988 5.78571C24.8328 5.78571 25.2656 6.21746 25.2656 6.75C25.2656 7.28254 24.8328 7.71428 24.2988 7.71428C23.7649 7.71428 23.332 7.28254 23.332 6.75C23.332 6.21746 23.7649 5.78571 24.2988 5.78571ZM28.166 11.5714H4.83398C4.2996 11.5714 3.86719 11.1401 3.86719 10.6071C3.86719 10.0741 4.2996 9.64286 4.83398 9.64286H28.166C28.7004 9.64286 29.1328 10.0741 29.1328 10.6071C29.1328 11.1401 28.7004 11.5714 28.166 11.5714ZM28.166 7.71428C27.6321 7.71428 27.1992 7.28254 27.1992 6.75C27.1992 6.21746 27.6321 5.78571 28.166 5.78571C28.6999 5.78571 29.1328 6.21746 29.1328 6.75C29.1328 7.28254 28.6999 7.71428 28.166 7.71428Z"
+                    ></path>
+                    <path
+                        d="M8.7655 17.3572C8.23112 17.3572 7.7987 17.7885 7.7987 18.3215V19.7952C7.7987 22.0873 6.52131 24.1477 4.4659 25.1732C3.98817 25.4114 3.79462 25.9906 4.03348 26.467C4.27118 26.9398 4.84817 27.1373 5.33073 26.8983C8.04607 25.5442 9.7323 22.8227 9.7323 19.7952V18.3215C9.7323 17.7885 9.29988 17.3572 8.7655 17.3572Z"
+                    ></path>
+                    <path
+                        d="M24.2344 17.3572C23.7 17.3572 23.2676 17.7885 23.2676 18.3215V19.7952C23.2676 22.8227 24.9538 25.5442 27.6691 26.8983C28.1513 27.137 28.7285 26.9402 28.9664 26.467C29.2053 25.9906 29.0117 25.4114 28.534 25.1732C26.4786 24.1477 25.2012 22.0873 25.2012 19.7952V18.3215C25.2012 17.7885 24.7688 17.3572 24.2344 17.3572Z"
+                    ></path>
+                    <path
+                        d="M17.4668 26.0357V18.3215C17.4668 17.7885 17.0344 17.3572 16.5 17.3572C15.9656 17.3572 15.5332 17.7885 15.5332 18.3215V26.0357C15.5332 26.5687 15.9656 27 16.5 27C17.0344 27 17.4668 26.5687 17.4668 26.0357Z"
+                    ></path>
+                    <path
+                        d="M21.334 26.0357V18.3215C21.334 17.7885 20.9016 17.3572 20.3672 17.3572C19.8328 17.3572 19.4004 17.7885 19.4004 18.3215V26.0357C19.4004 26.5687 19.8328 27 20.3672 27C20.9016 27 21.334 26.5687 21.334 26.0357Z"
+                    ></path>
+                    <path
+                        d="M13.5996 26.0357V18.3215C13.5996 17.7885 13.1672 17.3572 12.6328 17.3572C12.0984 17.3572 11.666 17.7885 11.666 18.3215V26.0357C11.666 26.5687 12.0984 27 12.6328 27C13.1672 27 13.5996 26.5687 13.5996 26.0357Z"
+                    ></path>
+                </g>
+                <defs>
+                    <clipPath id="clip0_77_1280">
+                        <rect width="33" height="27" fill="white"></rect>
+                    </clipPath>
+                </defs>
+            </symbol>
+            <symbol id="close" viewbox="0 0 25 25">
+                <g>
+                    <path
+                        d="M14.7904 12.5204L24.5249 2.78564C25.1584 2.15243 25.1584 1.12862 24.5249 0.495414C23.8917 -0.137794 22.8679 -0.137794 22.2347 0.495414L12.4999 10.2302L2.76536 0.495414C2.13185 -0.137794 1.10834 -0.137794 0.475129 0.495414C-0.158376 1.12862 -0.158376 2.15243 0.475129 2.78564L10.2096 12.5204L0.475129 22.2552C-0.158376 22.8884 -0.158376 23.9123 0.475129 24.5455C0.790695 24.8613 1.20562 25.02 1.62024 25.02C2.03487 25.02 2.44949 24.8613 2.76536 24.5455L12.4999 14.8107L22.2347 24.5455C22.5505 24.8613 22.9651 25.02 23.3798 25.02C23.7944 25.02 24.209 24.8613 24.5249 24.5455C25.1584 23.9123 25.1584 22.8884 24.5249 22.2552L14.7904 12.5204Z"
+                    ></path>
+                </g>
+            </symbol>
+            <symbol id="fan" viewbox="0 0 33 33">
+                <g>
+                    <path
+                        d="M16.5002 14.7344C15.5237 14.7316 14.7298 15.5209 14.7271 16.4974C14.7243 17.4738 15.5136 18.2676 16.4902 18.2703H16.4938C17.4703 18.2721 18.2634 17.482 18.2652 16.5056C18.2669 15.5292 17.4768 14.7362 16.5002 14.7344Z"
+                    ></path>
+                    <path
+                        d="M16.5074 11.7876H16.5032C13.8991 11.7827 11.7842 13.8896 11.7793 16.4934C11.7744 19.0972 13.8815 21.2119 16.4856 21.2168C17.742 21.2327 18.9503 20.734 19.8298 19.8366C21.1809 18.491 21.5877 16.4639 20.8601 14.7013C20.1326 12.9388 18.4143 11.7886 16.5074 11.7876ZM16.4956 19.4488H16.4897C14.8588 19.4472 13.5378 18.1244 13.5387 16.4936C13.5395 14.8629 14.8618 13.5414 16.4927 13.5414C18.1235 13.5414 19.4458 14.8629 19.4467 16.4936C19.4474 18.1244 18.1264 19.4472 16.4956 19.4488Z"
+                    ></path>
+                    <path
+                        d="M5.66887 20.6221C6.43754 19.8373 7.33701 19.1924 8.32698 18.7162C9.0934 18.2889 9.9627 18.081 10.8395 18.1151C10.2519 16.0783 10.8125 13.8831 12.3047 12.3774C10.6225 10.8148 8.47776 9.84143 6.19399 9.60403C4.76978 9.4231 3.34126 9.90531 2.31821 10.9123C1.55676 11.6775 0.96324 12.5929 0.575424 13.6003C-0.225866 15.366 -0.18867 17.3988 0.676826 19.134C0.740452 19.263 0.811814 19.375 0.880726 19.4923C1.56424 23.0966 3.47631 26.3525 6.29127 28.7052C6.45191 28.8458 6.67612 28.8885 6.87725 28.8169C7.07838 28.7452 7.22503 28.5704 7.26055 28.3599C7.29614 28.1494 7.21504 27.9361 7.04866 27.8024C4.91799 26.0207 3.33539 23.6723 2.48389 21.0287C2.58187 21.0809 2.68256 21.1277 2.78564 21.169C3.76479 21.6217 4.92353 21.402 5.66887 20.6221Z"
+                    ></path>
+                    <path
+                        d="M32.4282 19.4072C33.2272 17.6408 33.1874 15.6083 32.3197 13.8746C32.2532 13.7397 32.1842 13.6118 32.1123 13.4898C31.4279 9.89663 29.5213 6.65088 26.7159 4.30341C26.5548 4.16489 26.3315 4.12376 26.1316 4.19583C25.9317 4.26789 25.7861 4.44199 25.7505 4.65148C25.7149 4.86096 25.7948 5.07335 25.9597 5.20742C28.081 6.98335 29.657 9.32277 30.5057 11.9558C30.4119 11.9128 30.317 11.8715 30.2186 11.8379C29.2402 11.3853 28.0822 11.6046 27.3371 12.3836C26.5677 13.1687 25.6677 13.8142 24.6772 14.2912C23.9105 14.718 23.0415 14.9268 22.1646 14.8947C22.7531 16.9332 22.1908 19.1305 20.6953 20.6359C22.3781 22.1952 24.5212 23.1671 26.8031 23.4057C28.2297 23.5853 29.6601 23.1029 30.6865 22.0962C31.4483 21.3311 32.0415 20.4152 32.4282 19.4072Z"
+                    ></path>
+                    <path
+                        d="M13.8731 0.687191C13.7497 0.74733 13.6318 0.810176 13.5194 0.875794C9.90645 1.55337 6.64276 3.46924 4.29021 6.29344C4.1549 6.45484 4.11602 6.67612 4.18816 6.87394C4.2603 7.07176 4.43248 7.21615 4.63992 7.25257C4.84737 7.28905 5.05849 7.21209 5.19374 7.05069C6.9703 4.92134 9.31441 3.33942 11.954 2.48871C11.9071 2.5863 11.8652 2.68621 11.8285 2.78812C11.3817 3.76851 11.6037 4.92424 12.3819 5.6693C13.1632 6.44189 13.8081 7.34113 14.2892 8.32894C14.7147 9.09579 14.9225 9.96429 14.8904 10.8407C15.4147 10.6889 15.9576 10.611 16.5035 10.6091H16.5088C18.052 10.6103 19.5326 11.2195 20.6298 12.3045C22.1883 10.6222 23.1619 8.4817 23.4058 6.20152C23.5874 4.77521 23.1022 3.34471 22.0903 2.32319C21.3272 1.56059 20.413 0.966163 19.4062 0.578194C17.6414 -0.229651 15.6047 -0.189494 13.8731 0.687191Z"
+                    ></path>
+                    <path
+                        d="M13.598 32.4282C15.3646 33.2273 17.3974 33.1872 19.1312 32.3192C19.2626 32.2549 19.3787 32.1819 19.4984 32.1112C23.0995 31.4356 26.3532 29.5278 28.7011 26.7153C28.8419 26.5543 28.8845 26.3296 28.8123 26.1283C28.74 25.9269 28.5644 25.7805 28.3532 25.7458C28.1421 25.7111 27.9288 25.7934 27.7958 25.961C26.0199 28.089 23.674 29.6666 21.0332 30.5088C21.0839 30.4148 21.1294 30.318 21.1694 30.2189C21.6166 29.2385 21.3948 28.0825 20.6165 27.3371C19.838 26.5641 19.1957 25.6651 18.7169 24.678C18.2905 23.9121 18.0818 23.0441 18.1134 22.1681C17.5873 22.3183 17.0428 22.3949 16.4956 22.3956H16.4838C14.9422 22.3928 13.464 21.7823 12.3699 20.6965C10.8116 22.3798 9.83984 24.522 9.59978 26.8031C9.41773 28.2293 9.90024 29.6602 10.9088 30.685C11.674 31.4469 12.59 32.0406 13.598 32.4282Z"
+                    ></path>
+                </g>
+            </symbol>
+            <symbol id="mail" viewbox="0 0 24 18">
+                <g>
+                    <path
+                        d="M22 0H2.00002C0.896953 0 0 0.896953 0 2.00002V16C0 17.103 0.896953 18 2.00002 18H22C23.103 18 24 17.103 24 16V2.00002C24 0.896953 23.103 0 22 0ZM2.00002 0.999984H22C22.0737 0.999984 22.1386 1.02684 22.2078 1.04203C20.4763 2.62673 14.7348 7.87917 12.7256 9.68944C12.5684 9.83105 12.315 9.99998 12 9.99998C11.6851 9.99998 11.4317 9.83105 11.274 9.68897C9.26494 7.87898 3.52317 2.62627 1.79194 1.04213C1.86122 1.02694 1.92628 0.999984 2.00002 0.999984ZM0.999984 16V2.00002C0.999984 1.90205 1.02952 1.81317 1.05595 1.72364C2.3812 2.93658 6.38733 6.60145 8.98495 8.96362C6.39577 11.1877 2.38861 14.9868 1.05281 16.2606C1.02923 16.1756 0.999984 16.0924 0.999984 16ZM22 17H2.00002C1.92014 17 1.84913 16.9722 1.77455 16.9544C3.15488 15.6385 7.18753 11.8175 9.7312 9.64144C10.0628 9.94223 10.3657 10.2165 10.6045 10.4317C11.0166 10.8038 11.499 11 12 11C12.501 11 12.9834 10.8037 13.395 10.4321C13.6339 10.2169 13.937 9.94238 14.2688 9.64144C16.8126 11.8173 20.8447 15.638 22.2255 16.9544C22.1509 16.9722 22.08 17 22 17ZM23 16C23 16.0924 22.9708 16.1756 22.9472 16.2606C21.6109 14.9862 17.6042 11.1875 15.0151 8.96367C17.6128 6.6015 21.6183 2.93695 22.944 1.72355C22.9705 1.81308 23 1.902 23 1.99997V16Z"
+                        fill="#577A5B"
+                    ></path>
+                    <path
+                        d="M2.00002 0.999984H22C22.0737 0.999984 22.1386 1.02684 22.2078 1.04203C20.4763 2.62673 14.7348 7.87917 12.7256 9.68944C12.5684 9.83105 12.315 9.99998 12 9.99998C11.6851 9.99998 11.4317 9.83105 11.274 9.68897C9.26494 7.87898 3.52317 2.62627 1.79194 1.04213C1.86122 1.02694 1.92628 0.999984 2.00002 0.999984Z"
+                    ></path>
+                    <path
+                        d="M0.999984 16V2.00002C0.999984 1.90205 1.02952 1.81317 1.05595 1.72364C2.3812 2.93658 6.38733 6.60145 8.98495 8.96362C6.39577 11.1877 2.38861 14.9868 1.05281 16.2606C1.02923 16.1756 0.999984 16.0924 0.999984 16Z"
+                        fill="#78C081"
+                    ></path>
+                    <path
+                        d="M22 17H2.00002C1.92014 17 1.84913 16.9722 1.77455 16.9544C3.15488 15.6385 7.18753 11.8175 9.7312 9.64144C10.0628 9.94223 10.3657 10.2165 10.6045 10.4317C11.0166 10.8038 11.499 11 12 11C12.501 11 12.9834 10.8037 13.395 10.4321C13.6339 10.2169 13.937 9.94238 14.2688 9.64144C16.8126 11.8173 20.8447 15.638 22.2255 16.9544C22.1509 16.9722 22.08 17 22 17Z"
+                    ></path>
+                    <path
+                        d="M23 16C23 16.0924 22.9708 16.1756 22.9472 16.2606C21.6109 14.9862 17.6042 11.1875 15.0151 8.96367C17.6128 6.6015 21.6183 2.93695 22.944 1.72355C22.9705 1.81308 23 1.902 23 1.99997V16Z"
+                    ></path>
+                </g>
+            </symbol>
+        </svg>
+        <!-- /Sprite-->
+        <div class="page">
+            <header class="header" id="header">
+                <div class="header__inner">
+                    <a class="logo" href="index.html" aria-label="Pascal Vent"
+                        ><img
+                            class="logo__img"
+                            src="img/logo.png"
+                            alt="Pascal Vent"
+                            width="196"
+                            height="61"
+                    /></a>
+
+                    <div class="header__nav">
+                        <nav class="nav">
+                            <ul class="nav__list">
+                                <li class="nav__item">
+                                    <a class="link" href="#services">Услуги</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="link" href="#about">О нас</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="link" href="#benefits"
+                                        >Польза Продукта</a
+                                    >
+                                </li>
+                                <li class="nav__item">
+                                    <a class="link" href="#equipment"
+                                        >Оборудование</a
+                                    >
+                                </li>
+                                <li class="nav__item">
+                                    <a class="link" href="#stages"
+                                        >Этапы Работы</a
+                                    >
+                                </li>
+                                <li class="nav__item">
+                                    <a class="link" href="#reviews">Отзывы</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <button class="btn btn--sm" id="callBackBtn">
+                            <span class="btn__inner">Связаться</span>
+                        </button>
+                    </div>
+                    <!-- /header__nav-->
+                    <button class="header__menu-btn" aria-label="кнопка меню">
+                        <img
+                            class="header__menu-icon"
+                            src="img/icons/menu-icon.png"
+                            alt="иконка меню"
+                            width="49"
+                            height="49"
+                        />
+                    </button>
+                </div>
+                <!-- /header__inner-->
+            </header>
+            <!-- /header-->
+            <main class="content">
+                <div class="intro">
+                    <div class="intro__content">
+                        <h1 class="intro__title title">
+                            Чистый Воздух<span class="withDash withDash--before"
+                                >вместе с</span
+                            ><em>Pascal vent</em>
+                        </h1>
+
+                        <div class="intro__text-wrap">
+                            <img
+                                src="img/icons/circles.png"
+                                alt="круги"
+                                height="10"
+                                width="50"
+                            />
+                            <p class="intro__text">
+                                Проектирование, поставка и монтаж систем
+                                вентиляции и кондиционирования
+                            </p>
+                        </div>
+
+                        <div class="intro__contacts">
+                            <address
+                                class="intro__address contact contact--address"
+                            >
+                                Московский регион, Москва
+                            </address>
+
+                            <address
+                                class="intro__phone contact contact--phone"
+                            >
+                                <div class="intro__phone-container">
+                                    <a
+                                        class="link contact contact--phone"
+                                        href="tel:+74923736331"
+                                        >+ 7 492 373 63 31</a
+                                    ><a
+                                        class="link contact contact--phone"
+                                        href="tel:+74243678929"
+                                        >+ 7 424 367 89 29</a
+                                    >
+                                </div>
+                            </address>
+                        </div>
+                        <!-- /intro__contacts-->
+                        <button
+                            class="intro__btn btn btn--lg"
+                            id="leaveRequestBtn"
+                        >
+                            <span class="btn__inner">Оставить заявку</span>
+                        </button>
+                    </div>
+                    <!-- /intro__content-->
+
+                    <div class="intro__img">
+                        <picture>
+                            <source
+                                media="(max-width: 480px)"
+                                srcset="img/content/img_1--480h.avif"
+                                type="image/avif"
+                            />
+                            <source
+                                media="(max-width: 480px)"
+                                srcset="img/content/img_1--480h.webp"
+                                type="image/webp"
+                            />
+                            <source
+                                media="(max-width: 480px)"
+                                srcset="img/content/img_1--480h.jpg"
+                            />
+                            <source
+                                media="(max-width: 765px)"
+                                srcset="img/content/img_1--765h.avif"
+                                type="image/avif"
+                            />
+                            <source
+                                media="(max-width: 765px)"
+                                srcset="img/content/img_1--765h.webp"
+                                type="image/webp"
+                            />
+                            <source
+                                media="(max-width: 765px)"
+                                srcset="img/content/img_1--765h.jpg"
+                            />
+                            <source
+                                srcset="img/content/img_1--full.avif"
+                                type="image/avif"
+                            />
+                            <source
+                                srcset="img/content/img_1--full.webp"
+                                type="image/webp"
+                            />
+                            <source srcset="img/content/img_1--full.jpg" />
+                            <img
+                                src="img/content/img_1--full.jpg"
+                                alt="intro bg"
+                                width="1640"
+                                height="856"
+                            />
+                        </picture>
+                    </div>
+                    <!-- /intro__img-->
+                </div>
+                <!-- /intro-->
+                <div class="services base__flex-container" id="services">
+                    <div class="base__flex-item">
+                        <div class="services__content">
+                            <div class="services__title title">
+                                Предоставляемые<span
+                                    class="withDash withDash--after"
+                                    >услуги</span
+                                >
+                            </div>
+
+                            <div class="services__text">
+                                <p>
+                                    При разработке проекта предложим техническое
+                                    решение оптимальное по соотношению цены и
+                                    качества, оно идеально впишется в ваш
+                                    дизайн, а также будет учитывать все ваши
+                                    пожелания.
+                                </p>
+                                <p>
+                                    Монтаж выполняется опытными бригадами с
+                                    соблюдением всех действующих технических
+                                    норм, правил безопасности и строго по
+                                    согласованному проекту.
+                                </p>
+                                <p>
+                                    Одинаково эффективно выполняем
+                                    проектирование и монтаж на объектах любой
+                                    сложности – от небольшой квартиры, до
+                                    объектов со сложными технологическими
+                                    процессами на основе действующей нормативной
+                                    документации.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /services__content-->
+                    </div>
+                    <div class="services__block base__flex-item">
+                        <div class="services__types">
+                            <button
+                                class="services__btn services__btn--top active"
+                                id="vent-btn"
+                            >
+                                Система Вентиляции
+                                <svg class="services__btn--icon">
+                                    <use xlink:href="#fan"></use>
+                                </svg>
+                            </button>
+                            <button
+                                class="services__btn services__btn--bottom"
+                                id="cond-btn"
+                            >
+                                Кондиционирование
+                                <svg class="services__btn--icon">
+                                    <use xlink:href="#conditioner"></use>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="services__desc active" id="vent-desc">
+                            <div class="service">
+                                <ul class="service__list">
+                                    <li class="service__item">
+                                        <div class="service__icon">
+                                            <img
+                                                src="img/icons/design.png"
+                                                alt="проектирование"
+                                            />
+                                        </div>
+                                        <div class="service__text">
+                                            Проектирование систем вентиляции
+                                            любой сложности
+                                        </div>
+                                    </li>
+                                    <li class="service__item">
+                                        <div class="service__icon">
+                                            <img
+                                                src="img/icons/cooling.png"
+                                                alt="приточная вентиляция"
+                                            />
+                                        </div>
+                                        <div class="service__text">
+                                            Монтаж приточной вентиляции
+                                        </div>
+                                    </li>
+                                    <li class="service__item">
+                                        <div class="service__icon">
+                                            <img
+                                                src="img/icons/hood.png"
+                                                alt="вытяжка"
+                                            />
+                                        </div>
+                                        <div class="service__text">
+                                            Монтаж вытяжной вентиляции
+                                        </div>
+                                    </li>
+                                    <li class="service__item">
+                                        <div class="service__icon">
+                                            <img
+                                                src="img/icons/air__humidification.png"
+                                                alt="увлажнение"
+                                            />
+                                        </div>
+                                        <div class="service__text">
+                                            Монтаж вентиляции с увлажнением
+                                            воздуха
+                                        </div>
+                                    </li>
+                                    <li class="service__item">
+                                        <div class="service__icon">
+                                            <img
+                                                src="img/icons/recuperator.png"
+                                                alt="рекупиратор"
+                                            />
+                                        </div>
+                                        <div class="service__text">
+                                            Монтаж вентиляции с рекуператором
+                                        </div>
+                                    </li>
+                                    <li class="service__item">
+                                        <div class="service__icon">
+                                            <img
+                                                src="img/icons/dehumidification.png"
+                                                alt="осушение"
+                                            />
+                                        </div>
+                                        <div class="service__text">
+                                            Монтаж вентиляции с осушением для
+                                            бассейна
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="services__desc-img">
+                                <picture>
+                                    <source
+                                        media="(max-width: 480px)"
+                                        srcset="img/content/img_2--480w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        media="(max-width: 480px)"
+                                        srcset="img/content/img_2--480w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        media="(max-width: 480px)"
+                                        srcset="img/content/img_2--480w.jpg"
+                                    />
+
+                                    <source
+                                        media="(max-width: 768px)"
+                                        srcset="img/content/img_2--800w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        media="(max-width: 768px)"
+                                        srcset="img/content/img_2--800w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        media="(max-width: 768px)"
+                                        srcset="img/content/img_2--800w.jpg"
+                                    />
+
+                                    <source
+                                        srcset="img/content/img_2--1200w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        srcset="img/content/img_2--1200w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        srcset="img/content/img_2--1200w.jpg"
+                                    />
+                                    <img
+                                        src="img/content/img_2--1200w.jpg"
+                                        alt="вентиляция"
+                                        width="1200"
+                                        height="800"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+                        </div>
+                        <!-- /services__desc-->
+                        <div class="services__desc" id="cond-desc">
+                            <div class="service">
+                                <ul class="service__list">
+                                    <li class="service__item">
+                                        <div class="service__icon">
+                                            <img
+                                                src="img/icons/design.png"
+                                                alt="проектирование"
+                                            />
+                                        </div>
+                                        <div class="service__text">
+                                            Проектирование систем
+                                            кондиционирования
+                                        </div>
+                                    </li>
+                                    <li class="service__item">
+                                        <div class="service__icon">
+                                            <img
+                                                src="img/icons/air-conditioner.png"
+                                                alt="сплит"
+                                            />
+                                        </div>
+                                        <div class="service__text">
+                                            Монтаж сплит-систем
+                                        </div>
+                                    </li>
+                                    <li class="service__item">
+                                        <div class="service__icon">
+                                            <img
+                                                src="img/icons/multy-split-system.png"
+                                                alt="мульти сплит"
+                                            />
+                                        </div>
+                                        <div class="service__text">
+                                            Монтаж мульти сплит-систем
+                                        </div>
+                                    </li>
+                                    <li class="service__item">
+                                        <div class="service__icon">
+                                            <img
+                                                src="img/icons/vrv__vrf-system.png"
+                                                alt="VRV и VRF"
+                                            />
+                                        </div>
+                                        <div class="service__text">
+                                            Монтаж VRV и VRF систем
+                                        </div>
+                                    </li>
+                                    <li class="service__item">
+                                        <div class="service__icon">
+                                            <img
+                                                src="img/icons/ceiling.png"
+                                                alt="фанкойлы"
+                                            />
+                                        </div>
+                                        <div class="service__text">
+                                            Монтаж фанкойлов
+                                        </div>
+                                    </li>
+                                    <li class="service__item">
+                                        <div class="service__icon">
+                                            <img
+                                                src="img/icons/air-filter.png"
+                                                alt="фильтры"
+                                            />
+                                        </div>
+                                        <div class="service__text">
+                                            Монтаж настенных, канальных и
+                                            кассетных кондиционеров
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="services__desc-img">
+                                <picture>
+                                    <source
+                                        media="(max-width: 480px)"
+                                        srcset="img/content/img_3--480w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        media="(max-width: 480px)"
+                                        srcset="img/content/img_3--480w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        media="(max-width: 480px)"
+                                        srcset="img/content/img_3--480w.jpg"
+                                    />
+
+                                    <source
+                                        media="(max-width: 768px)"
+                                        srcset="img/content/img_3--800w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        media="(max-width: 768px)"
+                                        srcset="img/content/img_3--800w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        media="(max-width: 768px)"
+                                        srcset="img/content/img_3--800w.jpg"
+                                    />
+
+                                    <source
+                                        srcset="img/content/img_3--1200w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        srcset="img/content/img_3--1200w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        srcset="img/content/img_3--1200w.jpg"
+                                    />
+                                    <img
+                                        src="img/content/img_3--1200w.jpg"
+                                        alt="кондиционирование"
+                                        width="1200"
+                                        height="800"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+                        </div>
+                        <!-- /services__desc-->
+                    </div>
+                    <!-- /services__block-->
+                </div>
+                <!-- /services-->
+                <section class="solution">
+                    <h2 class="solution__title solution__title--mobile title">
+                        Комплексное решение<span
+                            class="withDash withDash--before"
+                            >по монтажу и</span
+                        >вентиляции под ключ
+                    </h2>
+                    <h2 class="solution__title title title">
+                        Комплексное решение по монтажу<span
+                            class="withDash withDash--after"
+                            >и вентиляции под ключ</span
+                        >
+                    </h2>
+
+                    <ul class="solution__list">
+                        <li class="solution__item">
+                            <span class="solution__price">от 100 000 ₽</span>
+                            <a
+                                class="solution__link"
+                                href="#"
+                                aria-label="Квартиры и офисы"
+                            >
+                                <picture>
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_4--480w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_4--480w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_4--480w.jpg"
+                                    />
+                                    <!-- full-versions-->
+                                    <source
+                                        srcset="img/content/img_4--1200w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        srcset="img/content/img_4--1200w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        srcset="img/content/img_4--1200w.jpg"
+                                    />
+                                    <img
+                                        class="solution__img"
+                                        src="img/content/img_4--480w.jpg"
+                                        alt="Квартиры и офисы"
+                                        width="257"
+                                        height="92"
+                                        loading="lazy"
+                                    /> </picture
+                            ></a>
+
+                            <div class="solution__name">Квартиры и офисы</div>
+                        </li>
+
+                        <li class="solution__item">
+                            <span class="solution__price">от 100 000 ₽</span>
+                            <a
+                                class="solution__link"
+                                href="#"
+                                aria-label="Магазины и ТЦ"
+                            >
+                                <picture>
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_5--480w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_5--480w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_5--480w.jpg"
+                                    />
+                                    <!-- full-versions-->
+                                    <source
+                                        srcset="img/content/img_5--1200w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        srcset="img/content/img_5--1200w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        srcset="img/content/img_5--1200w.jpg"
+                                    />
+                                    <img
+                                        class="solution__img"
+                                        src="img/content/img_5--480w.jpg"
+                                        alt="Магазины и ТЦ"
+                                        width="257"
+                                        height="92"
+                                        loading="lazy"
+                                    /> </picture
+                            ></a>
+
+                            <div class="solution__name">Магазины и ТЦ</div>
+                        </li>
+
+                        <li class="solution__item">
+                            <span class="solution__price">от 150 000 ₽</span>
+                            <a
+                                class="solution__link"
+                                href="#"
+                                aria-label="Фитнес центры"
+                            >
+                                <picture>
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_6--480w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_6--480w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_6--480w.jpg"
+                                    />
+                                    <!-- full-versions-->
+                                    <source
+                                        srcset="img/content/img_6--1200w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        srcset="img/content/img_6--1200w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        srcset="img/content/img_6--1200w.jpg"
+                                    />
+                                    <img
+                                        class="solution__img"
+                                        src="img/content/img_6--480w.jpg"
+                                        alt="Фитнес центры"
+                                        width="257"
+                                        height="92"
+                                        loading="lazy"
+                                    /> </picture
+                            ></a>
+
+                            <div class="solution__name">Фитнес центры</div>
+                        </li>
+
+                        <li class="solution__item">
+                            <span class="solution__price">от 150 000 ₽</span>
+                            <a
+                                class="solution__link"
+                                href="#"
+                                aria-label="Бассейны"
+                            >
+                                <picture>
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_7--480w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_7--480w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_7--480w.jpg"
+                                    />
+                                    <!-- full-versions-->
+                                    <source
+                                        srcset="img/content/img_7--1200w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        srcset="img/content/img_7--1200w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        srcset="img/content/img_7--1200w.jpg"
+                                    />
+                                    <img
+                                        class="solution__img"
+                                        src="img/content/img_7--480w.jpg"
+                                        alt="Бассейны"
+                                        width="257"
+                                        height="92"
+                                        loading="lazy"
+                                    /> </picture
+                            ></a>
+
+                            <div class="solution__name">Бассейны</div>
+                        </li>
+
+                        <li class="solution__item">
+                            <span class="solution__price">от 200 000 ₽</span>
+                            <a
+                                class="solution__link"
+                                href="#"
+                                aria-label="Загородные дома, коттеджи, таунхаусы"
+                            >
+                                <picture>
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_8--480w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_8--480w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_8--480w.jpg"
+                                    />
+                                    <!-- full-versions-->
+                                    <source
+                                        srcset="img/content/img_8--1200w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        srcset="img/content/img_8--1200w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        srcset="img/content/img_8--1200w.jpg"
+                                    />
+                                    <img
+                                        class="solution__img"
+                                        src="img/content/img_8--480w.jpg"
+                                        alt="Загородные дома, коттеджи, таунхаусы"
+                                        width="257"
+                                        height="92"
+                                        loading="lazy"
+                                    /> </picture
+                            ></a>
+
+                            <div class="solution__name">
+                                Загородные дома, коттеджи, таунхаусы
+                            </div>
+                        </li>
+
+                        <li class="solution__item">
+                            <span class="solution__price">от 200 000 ₽</span>
+                            <a
+                                class="solution__link"
+                                href="#"
+                                aria-label="Рестораны, кафе, бары"
+                            >
+                                <picture>
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_9--480w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_9--480w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_9--480w.jpg"
+                                    />
+                                    <!-- full-versions-->
+                                    <source
+                                        srcset="img/content/img_9--1200w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        srcset="img/content/img_9--1200w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        srcset="img/content/img_9--1200w.jpg"
+                                    />
+                                    <img
+                                        class="solution__img"
+                                        src="img/content/img_9--480w.jpg"
+                                        alt="Рестораны, кафе, бары"
+                                        width="257"
+                                        height="92"
+                                        loading="lazy"
+                                    /> </picture
+                            ></a>
+
+                            <div class="solution__name">
+                                Рестораны, кафе, бары
+                            </div>
+                        </li>
+
+                        <li class="solution__item">
+                            <span class="solution__price">от 200 000 ₽</span>
+                            <a
+                                class="solution__link"
+                                href="#"
+                                aria-label="Стоматологии, клиники"
+                            >
+                                <picture>
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_10--480w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_10--480w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_10--480w.jpg"
+                                    />
+                                    <!-- full-versions-->
+                                    <source
+                                        srcset="img/content/img_10--1200w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        srcset="img/content/img_10--1200w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        srcset="img/content/img_10--1200w.jpg"
+                                    />
+                                    <img
+                                        class="solution__img"
+                                        src="img/content/img_10--480w.jpg"
+                                        alt="Стоматологии, клиники"
+                                        width="257"
+                                        height="92"
+                                        loading="lazy"
+                                    /> </picture
+                            ></a>
+
+                            <div class="solution__name">
+                                Стоматологии, клиники
+                            </div>
+                        </li>
+
+                        <li class="solution__item">
+                            <span class="solution__price">от 100 000 ₽</span>
+                            <a
+                                class="solution__link"
+                                href="#"
+                                aria-label="Салоны красоты, СПА"
+                            >
+                                <picture>
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_11--480w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_11--480w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        media="(min-width: 280px)"
+                                        srcset="img/content/img_11--480w.jpg"
+                                    />
+                                    <!-- full-versions-->
+                                    <source
+                                        srcset="img/content/img_11--1200w.avif"
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        srcset="img/content/img_11--1200w.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        srcset="img/content/img_11--1200w.jpg"
+                                    />
+                                    <img
+                                        class="solution__img"
+                                        src="img/content/img_11--480w.jpg"
+                                        alt="Салоны красоты, СПА"
+                                        width="257"
+                                        height="92"
+                                        loading="lazy"
+                                    /> </picture
+                            ></a>
+
+                            <div class="solution__name">
+                                Салоны красоты, СПА
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- /solution__list-->
+                </section>
+                <!-- /solution-->
+                <div class="steps">
+                    <div class="steps__container">
+                        <h2 class="steps__title title">
+                            <span class="withDash withDash--after"
+                                >3 простых шага</span
+                            >к очищению воздуха
+                        </h2>
+                        <img
+                            class="steps__img steps__img--mobile"
+                            src="img/bg/steps--mobile.png"
+                            alt="шаги"
+                            width="375"
+                            height="534"
+                            loading="lazy"
+                        />
+                        <div class="discount">
+                            <h3 class="discount__title">
+                                Кажется, это знак...
+                            </h3>
+
+                            <ul class="discount__list">
+                                <li class="discount__item">
+                                    Получите скидку 5% на монтаж при заполнении
+                                    анкеты на сайте
+                                </li>
+                                <li class="discount__item">
+                                    Бесплатно сделаем проект и пусконаладку
+                                    системы при заказе монтажа
+                                </li>
+                                <li class="discount__item">
+                                    Кэшбек до 10% дизайнерам при передаче
+                                    Клиента и заказе у нас проекта с монтажом!
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /discount-->
+                    </div>
+                    <!-- /steps__container-->
+                    <img
+                        class="steps__img"
+                        src="img/bg/steps.png"
+                        alt="шаги"
+                        width="1440"
+                        height="503"
+                        loading="lazy"
+                    />
+                </div>
+                <!-- /steps-->
+                <section class="request">
+                    <h2 class="request__title title">
+                        Оставьте заявку и мы с вами свяжемся
+                    </h2>
+
+                    <div class="request__container">
+                        <form class="form request__form" action="#">
+                            <div class="form__group">
+                                <input
+                                    class="name form__input"
+                                    type="text"
+                                    name="name"
+                                    aria-label="Имя"
+                                    placeholder="Ваше Имя"
+                                    minlength="2"
+                                    maxlength="32"
+                                    pattern="/^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$/g"
+                                    title="Не корректное имя"
+                                    required
+                                />
+                            </div>
+
+                            <div class="form__group">
+                                <input
+                                    class="phone form__input"
+                                    type="tel"
+                                    name="phone"
+                                    aria-label="Телефон"
+                                    placeholder="Номер телефона"
+                                    pattern="/^((+7)[- ]?)?((?d)?[- ]?){10}$/g"
+                                    title="Номер не корректный"
+                                    required
+                                />
+                            </div>
+
+                            <button
+                                class="form__submit btn btn--sm"
+                                type="submit"
+                            >
+                                <span class="btn__inner">отправить</span>
+                            </button>
+                        </form>
+                    </div>
+                    <!-- /request__container-->
+                </section>
+                <!-- /request-->
+                <div class="about base__flex-container" id="about">
+                    <div class="base__flex-item">
+                        <div class="about__content">
+                            <div class="about__title title">
+                                о нас <span>Pascal vent</span><br />Особенности
+                            </div>
+                            <div class="about__text">
+                                <p>
+                                    Мы любим то, чем занимаемся – поэтому у нас
+                                    индивидуальный подход к каждому человеку,
+                                    креативные решения для проекта любой
+                                    сложности и высокий уровень клиентского
+                                    сервиса.
+                                </p>
+                                <p>
+                                    Именно поэтому нам доверяют сложнейшие
+                                    задачи, рекомендуют нас и возвращаются
+                                    вновь. Доверьте нам воплощение ваших самых
+                                    изысканных и технологичных задач, и мы
+                                    сделаем всё с высочайшим уровнем сервиса
+                                    <strong class="special">Pascal Vent</strong
+                                    >.
+                                </p>
+                                <p>
+                                    <strong class="special">Pascal Vent</strong>
+                                    гарантирует сертифицированные современные
+                                    системы, оборудование, качественные
+                                    материалы и самые оптимальные решения под
+                                    любой бюджет.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /about__content-->
+                    </div>
+                    <div class="base__flex-item">
+                        <ul class="about__achievements">
+                            <li class="achievement">
+                                <h3 class="achievement__title title">
+                                    10 лет на рынке
+                                </h3>
+                                <div class="achievement__text">
+                                    Работаем как единое целое
+                                </div>
+                            </li>
+                            <li class="achievement">
+                                <h3 class="achievement__title title">
+                                    + 11 лет стажа
+                                </h3>
+                                <div class="achievement__text">
+                                    Опытные и обученые специалисты своего дела
+                                </div>
+                            </li>
+                            <li class="achievement">
+                                <h3 class="achievement__title title">
+                                    + 180 клиентов
+                                </h3>
+                                <div class="achievement__text">
+                                    Число счастливых клиентов за этот период
+                                </div>
+                            </li>
+                            <li class="achievement">
+                                <h3 class="achievement__title title">
+                                    + 470 проектов
+                                </h3>
+                                <div class="achievement__text">
+                                    Большое количество реализованных проектов
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /about-->
+                <div class="benefits base__flex-container" id="benefits">
+                    <div class="base__flex-item">
+                        <div class="benefits__content">
+                            <div class="benefits__title title">
+                                комфорт и Уют <br />
+                                в любое время года
+                            </div>
+
+                            <ul class="benefits__icons-list">
+                                <li class="benefits__icons-item">
+                                    <img
+                                        class="benefits__icon"
+                                        src="img/icons/clean-air.png"
+                                        alt="чистый воздух"
+                                        width="33"
+                                        height="28"
+                                        loading="lazy"
+                                    />
+                                </li>
+                                <li class="benefits__icons-item">
+                                    <img
+                                        class="benefits__icon"
+                                        src="img/icons/temperatura.png"
+                                        alt="температура"
+                                        width="33"
+                                        height="28"
+                                        loading="lazy"
+                                    />
+                                </li>
+                                <li class="benefits__icons-item">
+                                    <img
+                                        class="benefits__icon"
+                                        src="img/icons/green-house.png"
+                                        alt="комфортные условия в помещении"
+                                        width="33"
+                                        height="28"
+                                        loading="lazy"
+                                    />
+                                </li>
+                                <li class="benefits__icons-item">
+                                    <img
+                                        class="benefits__icon"
+                                        src="img/icons/unpleasant-odors.png"
+                                        alt="удаление не приятных запахов"
+                                        width="33"
+                                        height="28"
+                                        loading="lazy"
+                                    />
+                                </li>
+                                <li class="benefits__icons-item">
+                                    <img
+                                        class="benefits__icon"
+                                        src="img/icons/humidity.png"
+                                        alt="влажность"
+                                        width="33"
+                                        height="28"
+                                        loading="lazy"
+                                    />
+                                </li>
+                                <li class="benefits__icons-item">
+                                    <img
+                                        class="benefits__icon"
+                                        src="img/icons/pollution.png"
+                                        alt="углекислый газ"
+                                        width="33"
+                                        height="28"
+                                        loading="lazy"
+                                    />
+                                </li>
+                            </ul>
+
+                            <ul class="benefits__conditions-list">
+                                <li class="confort__conditions-item">
+                                    <span></span>Создание комфортных условий для
+                                    работы и отдыха
+                                </li>
+                                <li class="confort__conditions-item">
+                                    <span></span>Чистый, свежий, приточный
+                                    воздух круглый год
+                                </li>
+                                <li class="confort__conditions-item">
+                                    <span></span>Удаление не приятных запахов,
+                                    избыточной влажности и накопившегося
+                                    углекислого газа из помещений
+                                </li>
+                                <li class="confort__conditions-item">
+                                    <span></span>Поддержание комфортной
+                                    температуры и влажности воздуха зимой и
+                                    летом
+                                </li>
+                            </ul>
+
+                            <p class="benefits__text">
+                                <strong class="special">Pascsl Vent</strong>
+                                поможет улучшить ваше самочувствие и повысить
+                                работоспособность днем, а ночью подарит здоровый
+                                и крепкий сон. Это важно для тех, кто следит за
+                                своим здоровьем и здоровьем своих близких.
+                            </p>
+
+                            <button class="btn btn--lg" id="fillOutRequestBtn">
+                                <span class="btn__inner">заполнить заявку</span>
+                            </button>
+                        </div>
+                        <!-- /benefits__content-->
+                    </div>
+                    <!-- / base__flex-item-->
+                    <div class="base__flex-item">
+                        <div class="benefits__images">
+                            <div class="block">
+                                <div class="block__item block__item--1">
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                img/content/img_12--1200w.avif
+                                            "
+                                            type="image/avif"
+                                        />
+                                        <source
+                                            srcset="
+                                                img/content/img_12--1200w.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            srcset="
+                                                img/content/img_12--1200w.jpg
+                                            "
+                                        />
+                                        <img
+                                            class="block__img"
+                                            src="img/content/img_12--1200w.jpg"
+                                            alt="кондиционер"
+                                            width="1200"
+                                            height="800"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+                                </div>
+                                <!-- /.block__item.block__item--1-->
+                                <div class="block__item block__item--2">
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                img/content/img_14--1200w.avif
+                                            "
+                                            type="image/avif"
+                                        />
+                                        <source
+                                            srcset="
+                                                img/content/img_14--1200w.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            srcset="
+                                                img/content/img_14--1200w.jpg
+                                            "
+                                        />
+                                        <img
+                                            class="block__img"
+                                            src="img/content/img_14--1200w.jpg"
+                                            alt="система вентиляции и кондиционирования"
+                                            width="1200"
+                                            height="800"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+                                </div>
+                                <!-- /.block__item.block__item--2-->
+                            </div>
+                            <!-- /.block-->
+                            <div class="block block--2">
+                                <div class="block__item block__item--2">
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                img/content/img_13--1200w.avif
+                                            "
+                                            type="image/avif"
+                                        />
+                                        <source
+                                            srcset="
+                                                img/content/img_13--1200w.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            srcset="
+                                                img/content/img_13--1200w.jpg
+                                            "
+                                        />
+                                        <img
+                                            class="block__img"
+                                            src="img/content/img_13--1200w.jpg"
+                                            alt="труба"
+                                            width="1200"
+                                            height="800"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+                                </div>
+                                <!-- /.block__item.block__item--2-->
+                                <div class="block__item block__item--1">
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                img/content/img_15--1200w.avif
+                                            "
+                                            type="image/avif"
+                                        />
+                                        <source
+                                            srcset="
+                                                img/content/img_15--1200w.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            srcset="
+                                                img/content/img_15--1200w.jpg
+                                            "
+                                        />
+                                        <img
+                                            class="block__img"
+                                            src="img/content/img_15--1200w.jpg"
+                                            alt="вентиляция"
+                                            width="1200"
+                                            height="800"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+                                </div>
+                                <!-- /.block__item.block__item--1-->
+                            </div>
+                            <!-- /.block.block--2-->
+                        </div>
+                        <!-- /.benefits__images-->
+                    </div>
+                    <!-- / base__flex-item-->
+                </div>
+                <!-- /benefits-->
+                <section class="stages" id="stages">
+                    <h2 class="stages__title title">
+                        Понятная и эффективная схема работы
+                    </h2>
+
+                    <div class="stages__container">
+                        <ul class="stages__list">
+                            <li class="stages__item">
+                                <div class="stages__content">
+                                    <h3 class="stages__subtitle title">
+                                        Получение заявки
+                                    </h3>
+                                    <p class="stages__text">
+                                        Заполните форму, укажите свои данные и
+                                        отправьте нашим менеджерам в обработку
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="stages__item">
+                                <div class="stages__content">
+                                    <h3 class="stages__subtitle title">
+                                        Консультация
+                                    </h3>
+                                    <p class="stages__text">
+                                        После обработки Вашей заявки, мы
+                                        связываемся с Вами, выявляем потребности
+                                        и пожелания, а также проводим
+                                        техническую консультацию
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="stages__item">
+                                <div class="stages__content">
+                                    <h3 class="stages__subtitle title">
+                                        Выезд на объект
+                                    </h3>
+                                    <p class="stages__text">
+                                        В назначенное время мы выезжаем на
+                                        объект и согласовываем основные
+                                        технические решения, обсуждаем
+                                        техническое задание
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="stages__item">
+                                <div class="stages__content">
+                                    <h3 class="stages__subtitle title">
+                                        Составляем График
+                                    </h3>
+                                    <p class="stages__text">
+                                        На этом этапе мы составляем коммерческое
+                                        предложение и занимаемся согласованием
+                                        графика работ (проектирования, закупки
+                                        оборудования и монтажа).
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="stages__item">
+                                <div class="stages__content">
+                                    <h3 class="stages__subtitle title">
+                                        договор
+                                    </h3>
+                                    <p class="stages__text">
+                                        Мы заключаем с Вами договор и начинаем
+                                        проектирование и согласование проекта
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="stages__item">
+                                <div class="stages__content">
+                                    <h3 class="stages__subtitle title">
+                                        Поставка и монтаж
+                                    </h3>
+                                    <p class="stages__text">
+                                        На этом этапе, происходит поставка всех
+                                        материалов и начинается выполнение
+                                        монтажных работ
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="stages__item">
+                                <div class="stages__content">
+                                    <h3 class="stages__subtitle title">
+                                        Подписание акта выполненных работ
+                                    </h3>
+                                    <p class="stages__text"></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /stages__container-->
+                </section>
+                <!-- /stages-->
+                <div class="portfolio" id="equipment">
+                    <div class="portfolio__content base__flex-container">
+                        <div class="base__flex-item">
+                            <h2 class="portfolio__title title">
+                                Портфолио И Процесс работы
+                            </h2>
+                        </div>
+
+                        <div class="base__flex-item">
+                            <p class="portfolio__text">
+                                Технические решения, принятые в рабочих
+                                чертежах, соответствуют требованиям
+                                экологических, санитарно-гигиенических,
+                                противопожарных и других норм и правил, и
+                                обеспечивают безопасную для жизни людей
+                                эксплуатацию объекта при соблюдении
+                                предусмотренных рабочими чертежами мероприятий.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- /portfolio__content-->
+                    <div class="portfolio__container">
+                        <div class="portfolio__buttons">
+                            <button
+                                class="btn btn--circle portfolio__prev-btn"
+                                aria-label="предыдущий"
+                            >
+                                <span class="btn__inner">
+                                    <svg class="btn__icon">
+                                        <use xlink:href="#prev-icon"></use></svg
+                                ></span>
+                            </button>
+                            <button
+                                class="btn btn--circle portfolio__next-btn"
+                                aria-label="следующий"
+                            >
+                                <span class="btn__inner">
+                                    <svg class="btn__icon">
+                                        <use xlink:href="#next-icon"></use></svg
+                                ></span>
+                            </button>
+                        </div>
+
+                        <div class="portfolio__slider">
+                            <div class="carousel-cell">
+                                <div class="slide">
+                                    <div class="slide__logo">
+                                        <img
+                                            src="img/logo.png"
+                                            alt="Pascla Vent"
+                                            width="94"
+                                            height="29"
+                                            loading="lazy"
+                                        />
+                                    </div>
+
+                                    <picture>
+                                        <source
+                                            media="(max-width: 480px)"
+                                            srcset="
+                                                img/content/img_16--480w.avif
+                                            "
+                                            type="image/avif"
+                                        />
+                                        <source
+                                            media="(max-width: 480px)"
+                                            srcset="
+                                                img/content/img_16--480w.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            media="(max-width: 480px)"
+                                            srcset="
+                                                img/content/img_16--480w.jpg
+                                            "
+                                        />
+
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                img/content/img_16--800w.avif
+                                            "
+                                            type="image/avif"
+                                        />
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                img/content/img_16--800w.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                img/content/img_16--800w.jpg
+                                            "
+                                        />
+
+                                        <source
+                                            srcset="
+                                                img/content/img_16--1200w.avif
+                                            "
+                                            type="image/avif"
+                                        />
+                                        <source
+                                            srcset="
+                                                img/content/img_16--1200w.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            srcset="
+                                                img/content/img_16--1200w.jpg
+                                            "
+                                        />
+                                        <img
+                                            class="slide__img"
+                                            src="img/content/img_16--1200w.jpg"
+                                            alt="вентиляция"
+                                            width="1200"
+                                            height="800"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+
+                                    <div class="slide__container">
+                                        <h2 class="slide__title title">
+                                            приточная вентиляция
+                                        </h2>
+                                        <div class="slide__text">
+                                            Монтаж приточной вентиляции (объект
+                                            в Прайм Парк)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /carousel-cell-->
+
+                            <div class="carousel-cell">
+                                <div class="slide">
+                                    <div class="slide__logo">
+                                        <img
+                                            src="img/logo.png"
+                                            alt="Pascla Vent"
+                                            width="94"
+                                            height="29"
+                                            loading="lazy"
+                                        />
+                                    </div>
+
+                                    <picture>
+                                        <source
+                                            media="(max-width: 480px)"
+                                            srcset="
+                                                img/content/img_17--480w.avif
+                                            "
+                                            type="image/avif"
+                                        />
+                                        <source
+                                            media="(max-width: 480px)"
+                                            srcset="
+                                                img/content/img_17--480w.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            media="(max-width: 480px)"
+                                            srcset="
+                                                img/content/img_17--480w.jpg
+                                            "
+                                        />
+
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                img/content/img_17--800w.avif
+                                            "
+                                            type="image/avif"
+                                        />
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                img/content/img_17--800w.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                img/content/img_17--800w.jpg
+                                            "
+                                        />
+
+                                        <source
+                                            srcset="
+                                                img/content/img_17--1200w.avif
+                                            "
+                                            type="image/avif"
+                                        />
+                                        <source
+                                            srcset="
+                                                img/content/img_17--1200w.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            srcset="
+                                                img/content/img_17--1200w.jpg
+                                            "
+                                        />
+                                        <img
+                                            class="slide__img"
+                                            src="img/content/img_17--1200w.jpg"
+                                            alt="вентиляция"
+                                            width="1200"
+                                            height="800"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+
+                                    <div class="slide__container">
+                                        <h2 class="slide__title title">
+                                            приточная вентиляция
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /carousel-cell-->
+
+                            <div class="carousel-cell">
+                                <div class="slide">
+                                    <div class="slide__logo">
+                                        <img
+                                            src="img/logo.png"
+                                            alt="Pascla Vent"
+                                            width="94"
+                                            height="29"
+                                            loading="lazy"
+                                        />
+                                    </div>
+
+                                    <picture>
+                                        <source
+                                            media="(max-width: 480px)"
+                                            srcset="
+                                                img/content/img_18--480w.avif
+                                            "
+                                            type="image/avif"
+                                        />
+                                        <source
+                                            media="(max-width: 480px)"
+                                            srcset="
+                                                img/content/img_18--480w.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            media="(max-width: 480px)"
+                                            srcset="
+                                                img/content/img_18--480w.jpg
+                                            "
+                                        />
+
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                img/content/img_18--800w.avif
+                                            "
+                                            type="image/avif"
+                                        />
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                img/content/img_18--800w.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                img/content/img_18--800w.jpg
+                                            "
+                                        />
+
+                                        <source
+                                            srcset="
+                                                img/content/img_18--1200w.avif
+                                            "
+                                            type="image/avif"
+                                        />
+                                        <source
+                                            srcset="
+                                                img/content/img_18--1200w.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            srcset="
+                                                img/content/img_18--1200w.jpg
+                                            "
+                                        />
+                                        <img
+                                            class="slide__img"
+                                            src="img/content/img_18--1200w.jpg"
+                                            alt="кондиционер"
+                                            width="1200"
+                                            height="800"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+
+                                    <div class="slide__container">
+                                        <h2 class="slide__title title">
+                                            Канальные кондиционеры
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /carousel-cell-->
+
+                            <div class="carousel-cell">
+                                <div class="slide">
+                                    <div class="slide__logo">
+                                        <img
+                                            src="img/logo.png"
+                                            alt="Pascla Vent"
+                                            width="94"
+                                            height="29"
+                                            loading="lazy"
+                                        />
+                                    </div>
+
+                                    <picture>
+                                        <source
+                                            media="(max-width: 480px)"
+                                            srcset="
+                                                img/content/img_19--480w.avif
+                                            "
+                                            type="image/avif"
+                                        />
+                                        <source
+                                            media="(max-width: 480px)"
+                                            srcset="
+                                                img/content/img_19--480w.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            media="(max-width: 480px)"
+                                            srcset="
+                                                img/content/img_19--480w.jpg
+                                            "
+                                        />
+
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                img/content/img_19--800w.avif
+                                            "
+                                            type="image/avif"
+                                        />
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                img/content/img_19--800w.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                img/content/img_19--800w.jpg
+                                            "
+                                        />
+
+                                        <source
+                                            srcset="
+                                                img/content/img_19--1200w.avif
+                                            "
+                                            type="image/avif"
+                                        />
+                                        <source
+                                            srcset="
+                                                img/content/img_19--1200w.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            srcset="
+                                                img/content/img_19--1200w.jpg
+                                            "
+                                        />
+                                        <img
+                                            class="slide__img"
+                                            src="img/content/img_19--1200w.jpg"
+                                            alt="кондиционер"
+                                            width="1200"
+                                            height="800"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+
+                                    <div class="slide__container">
+                                        <h2 class="slide__title title">
+                                            Канальные кондиционеры
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /carousel-cell-->
+                        </div>
+                        <!-- /portfolio__slider-->
+                    </div>
+                    <!-- /portfolio__container-->
+                </div>
+                <!-- /portfolio-->
+                <div class="reviews" id="reviews">
+                    <div class="base__flex-container">
+                        <div class="base__flex-item">
+                            <div class="reviews__content">
+                                <h2 class="reviews__title title">
+                                    <span class="withDash withDash--after"
+                                        >Известные клиенты</span
+                                    >которые нам доверились
+                                </h2>
+                                <h2
+                                    class="reviews__title reviews__title--mobile title"
+                                >
+                                    Известные клиенты
+                                </h2>
+
+                                <p>
+                                    Реализованы проекты квартир и коммерческих
+                                    помещений в жилых комплексах от крупных
+                                    застройщиков таких как: Level, ФСК, MR
+                                    групп, ПИК, Самолет, Гранель, Донстрой,
+                                    Пионер, Эталон, А101, Sminex, Vesper,
+                                    Инград, КРОСТ, МИЦ. Мы ценим каждого клиента
+                                    <strong class="special">Pascal Vent</strong>
+                                    и с радостью готовы расширять нашу
+                                    клиентскую базу.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="base__flex-item">
+                            <div class="reviews__slider">
+                                <div class="carousel-cell">
+                                    <div class="reviews__slide">
+                                        <img
+                                            src="img/logo/MRGroup.png"
+                                            alt="MRGroup"
+                                            width="188"
+                                            height="40"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="reviews__slide">
+                                        <img
+                                            src="img/logo/Sminex.png"
+                                            alt="Sminex"
+                                            width="188"
+                                            height="40"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="reviews__slide">
+                                        <img
+                                            src="img/logo/MRGroup.png"
+                                            alt="MRGroup"
+                                            width="188"
+                                            height="40"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="reviews__slide">
+                                        <img
+                                            src="img/logo/Sminex.png"
+                                            alt="Sminex"
+                                            width="188"
+                                            height="40"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /reviews__slider-->
+                            <div class="reviews__buttons">
+                                <button
+                                    class="btn btn--circle reviews__prev-btn"
+                                    aria-label="предыдущий"
+                                >
+                                    <span class="btn__inner">
+                                        <svg class="btn__icon">
+                                            <use
+                                                xlink:href="#prev-icon"
+                                            ></use></svg
+                                    ></span>
+                                </button>
+                                <button
+                                    class="btn btn--circle reviews__next-btn"
+                                    aria-label="следующий"
+                                >
+                                    <span class="btn__inner">
+                                        <svg class="btn__icon">
+                                            <use
+                                                xlink:href="#next-icon"
+                                            ></use></svg
+                                    ></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /reviews-->
+                <div class="modal modal--request">
+                    <div class="modal__container">
+                        <button
+                            class="modal__btn btn btn--sm"
+                            id="requestModalClose"
+                        >
+                            <span class="btn__inner">
+                                <svg class="modal__btn-icon">
+                                    <use xlink:href="#close"></use></svg
+                            ></span>
+                        </button>
+
+                        <div class="modal__header">
+                            <h3 class="modal__title title">
+                                мы свяжемся
+                                <span class="withDash withDash--after"
+                                    >с вами</span
+                                >
+                            </h3>
+                        </div>
+
+                        <div class="modal__main">
+                            <form class="form modal__form" action="#">
+                                <div class="form__group">
+                                    <input
+                                        class="name form__input"
+                                        type="text"
+                                        name="name"
+                                        aria-label="Имя"
+                                        placeholder="Ваше Имя"
+                                        minlength="2"
+                                        maxlength="32"
+                                        pattern="/^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$/g"
+                                        title="Не корректное имя"
+                                        required
+                                    />
+                                </div>
+
+                                <div class="form__group">
+                                    <input
+                                        class="phone form__input"
+                                        type="tel"
+                                        name="phone"
+                                        aria-label="Телефон"
+                                        placeholder="Номер телефона"
+                                        pattern="/^((+7)[- ]?)?((?d)?[- ]?){10}$/g"
+                                        title="Номер не корректный"
+                                        required
+                                    />
+                                </div>
+
+                                <button
+                                    class="form__submit btn btn--sm"
+                                    type="submit"
+                                >
+                                    <span class="btn__inner">отправить</span>
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="modal__footer">
+                            <img
+                                src="img/logo.png"
+                                alt="Pascla Vent"
+                                width="228"
+                                height="68"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <!-- /.modal.modal--request-->
+                <div class="modal modal--call-back">
+                    <div class="modal__container">
+                        <button
+                            class="modal__btn btn btn--sm"
+                            id="callBackCloseBtn"
+                        >
+                            <span class="btn__inner">
+                                <svg class="modal__btn-icon">
+                                    <use xlink:href="#close"></use></svg
+                            ></span>
+                        </button>
+
+                        <div class="modal__header">
+                            <h3 class="modal__title title">
+                                Быстрая связь
+                                <span class="withDash withDash--after"
+                                    >с нами</span
+                                >
+                            </h3>
+                        </div>
+
+                        <div class="modal__main">
+                            <p class="modal__text">
+                                Вы можете набрать нам, и менеджеры Pascal Vent с
+                                радостью проконсультирует Вас по любому вопросу
+                                и помогут определиться с выбором.
+                            </p>
+
+                            <div class="schedule">
+                                <div class="schedule__title">
+                                    График приема звонков:
+                                </div>
+                                <div class="contact contact--schedule">
+                                    ПН-СБ с 9:00 до 19:00
+                                </div>
+                            </div>
+                            <address class="modal__contacts">
+                                <a
+                                    class="link contact contact--phone"
+                                    href="tel:+74923736331"
+                                    >+ 7 492 373 63 31</a
+                                ><a
+                                    class="link contact contact--phone"
+                                    href="tel:+74243678929"
+                                    >+ 7 424 367 89 29</a
+                                >
+                            </address>
+                        </div>
+
+                        <div class="modal__footer">
+                            <img
+                                src="img/logo.png"
+                                alt="Pascla Vent"
+                                width="228"
+                                height="68"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <!-- /modal.modal--call-back-->
+            </main>
+            <footer class="footer">
+                <div class="footer__container">
+                    <div class="footer__content">
+                        <img
+                            class="footer__logo"
+                            src="img/logo.png"
+                            alt="Pascal Vent fresh air"
+                            width="352"
+                            height="109"
+                            loading="lazy"
+                        />
+
+                        <div class="footer__text">
+                            <p>
+                                Компания
+                                <strong class="special">"Pascal Vent"</strong>
+                                входит в число лучших специализированных
+                                организаций, с широким ассортиментом товаров и
+                                услуг, предназначенных для систем вентиляции и
+                                кондиционирования, предоставляющих высокий
+                                сервис и удобство обслуживания нашим клиентам.
+                            </p>
+                        </div>
+
+                        <p class="footer__tagline title">
+                            Чистый воздух вместе с <span>Pascal Vent</span>
+                        </p>
+                    </div>
+                    <!-- /footer__content-->
+                    <div class="footer__contacts">
+                        <h3 class="footer__title title">Контакты</h3>
+
+                        <div class="footer__contacts-container">
+                            <ul class="footer__contacts-list">
+                                <li class="footer__contacts-item underline">
+                                    <a
+                                        class="link contact contact--phone"
+                                        href="tel:+74923736331"
+                                        >+ 7 492 373 63 31</a
+                                    >
+                                </li>
+                                <li class="footer__contacts-item underline">
+                                    <a
+                                        class="link contact contact--phone"
+                                        href="tel:+74243678929"
+                                        >+ 7 424 367 89 29</a
+                                    >
+                                </li>
+                                <li class="footer__contacts-item underline">
+                                    <a
+                                        class="link contact contact--mail"
+                                        href="mailto:PascalVent@mail.ru"
+                                        >PascalVent@mail.ru</a
+                                    >
+                                </li>
+                            </ul>
+                            <ul class="footer__contacts-list">
+                                <li class="footer__contacts-item">
+                                    <div class="contact contact--calendar">
+                                        Пн - Сб: 9:00 - 19:00 Вс: выходной
+                                    </div>
+                                </li>
+                                <li class="footer__contacts-item">
+                                    <address class="contact contact--address">
+                                        Московский регион, Москва ул. Плеханова,
+                                        28А
+                                    </address>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /footer__contacts-->
+                    <div class="footer__request">
+                        <h3 class="footer__title title">Заполнить заявку</h3>
+
+                        <form class="form footer__form" action="#">
+                            <div class="form__group">
+                                <input
+                                    class="name form__input"
+                                    type="text"
+                                    name="name"
+                                    aria-label="Имя"
+                                    placeholder="Ваше Имя"
+                                    minlength="2"
+                                    maxlength="32"
+                                    pattern="/^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$/g"
+                                    title="Не корректное имя"
+                                    required
+                                />
+                            </div>
+
+                            <div class="form__group">
+                                <input
+                                    class="phone form__input"
+                                    type="tel"
+                                    name="phone"
+                                    aria-label="Телефон"
+                                    placeholder="Номер телефона"
+                                    pattern="/^((+7)[- ]?)?((?d)?[- ]?){10}$/g"
+                                    title="Номер не корректный"
+                                    required
+                                />
+                            </div>
+
+                            <button
+                                class="form__submit btn btn--sm"
+                                type="submit"
+                            >
+                                <span class="btn__inner">отправить</span>
+                            </button>
+                        </form>
+                    </div>
+                    <!-- /footer__request-->
+                </div>
+                <!-- /footer__container-->
+            </footer>
+            <!-- /footer-->
+        </div>
+        <!-- /Page-->
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

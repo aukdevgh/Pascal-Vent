@@ -1,0 +1,23 @@
+.base__flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 1300px) {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+.base__flex-item {
+    max-width: 50%;
+    width: 100%;
+
+    @media screen and (max-width: 1300px) {
+        max-width: 100%;
+    }
+}
+
+.special {
+    font-weight: 600;
+}

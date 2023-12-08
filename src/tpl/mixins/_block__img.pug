@@ -1,0 +1,8 @@
+mixin block__img(img)
+    picture
+        source(srcset=`@img/content/${img.name}.avif`, type="image/avif")
+        source(srcset=`@img/content/${img.name}.webp`, type="image/webp")
+        source(srcset=`@img/content/${img.name}.jpg`)
+        |
+        |
+        img.block__img(src=`@img/content/${img.name}.jpg`, alt=img.alt, width='1200', height='800', loading='lazy')

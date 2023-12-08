@@ -1,0 +1,21 @@
+header#header.header
+    .header__inner
+        |
+        |
+        a.logo(href='index.html' aria-label='Pascal Vent')
+            img.logo__img(src='@img/logo.png' alt='Pascal Vent' width='196' height='61')
+        |
+        |
+        .header__nav
+            include _nav
+
+            button#callBackBtn.btn.btn--sm
+                span.btn__inner Связаться
+        // /header__nav
+        button.header__menu-btn(aria-label='кнопка меню')
+            img.header__menu-icon(src="@img/icons/menu-icon.png", alt="иконка меню" width='49' height='49')
+    // /header__inner
+// /header
+
+
+

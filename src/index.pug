@@ -1,0 +1,38 @@
+extends ./tpl/layouts/default.pug
+
+
+block head
+    - const pageTitle = 'Pascal Vent'
+block link
+    link(rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css")
+
+
+block content
+    include ./tpl/partials/_intro.pug
+
+    include ./tpl/partials/_services
+
+    include ./tpl/partials/_solution
+
+    include ./tpl/partials/_steps
+
+    include ./tpl/partials/_request
+
+    include ./tpl/partials/_about
+
+    include ./tpl/partials/_benefits
+
+    include ./tpl/partials/_stages
+
+    include ./tpl/partials/_portfolio
+
+    include ./tpl/partials/_reviews
+
+    include ./tpl/partials/_modal-request
+
+    include ./tpl/partials/_modal-call-back
+
+
+
+block script
+    script(src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js")

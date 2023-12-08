@@ -1,0 +1,17 @@
+mixin picture(img, imgClass='')
+        picture
+            source(media="(max-width: 480px)", srcset=`@img/content/${img.srcName}--480w.avif`, type="image/avif")
+            source(media="(max-width: 480px)", srcset=`@img/content/${img.srcName}--480w.webp`, type="image/webp")
+            source(media="(max-width: 480px)", srcset=`@img/content/${img.srcName}--480w.jpg`)
+            |
+            |
+            source(media="(max-width: 768px)", srcset=`@img/content/${img.srcName}--800w.avif`, type="image/avif")
+            source(media="(max-width: 768px)", srcset=`@img/content/${img.srcName}--800w.webp`, type="image/webp")
+            source(media="(max-width: 768px)", srcset=`@img/content/${img.srcName}--800w.jpg`)
+            |
+            |
+            source(srcset=`@img/content/${img.srcName}--1200w.avif`, type="image/avif")
+            source(srcset=`@img/content/${img.srcName}--1200w.webp`, type="image/webp")
+            source(srcset=`@img/content/${img.srcName}--1200w.jpg`)
+
+            img(class=imgClass src=`@img/content/${img.srcName}--1200w.jpg` alt=img.alt width='1200' height='800' loading='lazy')

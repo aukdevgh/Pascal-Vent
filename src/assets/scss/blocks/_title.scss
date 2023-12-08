@@ -1,0 +1,22 @@
+.title {
+    width: fit-content;
+
+    margin-bottom: 20px;
+
+    font-family: Ruberoid, sans-serif;
+    font-size: clamp(28px, 22px + 1.6vw, 45px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3333; /* 133.333% */
+    text-transform: capitalize;
+
+    color: $green-dark;
+
+    @media screen and (max-width: 768px) {
+        line-height: 1.357;
+    }
+
+    @media screen and (max-width: 374px) {
+        font-size: 20px;
+    }
+}

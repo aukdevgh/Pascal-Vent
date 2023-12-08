@@ -1,0 +1,35 @@
+$color-accent: rgb(120, 192, 129);
+$green: #7ca381;
+$green-light: #d9fadd;
+$green-dark: #495e4c;
+$white: #fff;
+$grey: #848484;
+
+$color-contact: #7b897d;
+$error: #ff5858;
+
+$btn-active: #5ccd6a;
+$btn-hover: #54e165;
+$btn-disabled: #9cd3a3;
+
+$radius-10: 10px;
+$radius-15: 15px;
+$radius-17: 17px;
+$radius-20: 20px;
+$radius-23: 23px;
+$radius-25: 25px;
+$radius-30: 30px;
+$radius-35: 35px;
+$radius-40: 40px;
+$radius-50: 50px;
+$radius-65: 65px;
+
+/* выпуклость кнопки\ */
+$shadow: 2px -2px 12px 0px rgba(34, 111, 33, 0.36) inset;
+/* тень белых форм */
+$shadow-white-form: 0px 0px 12px 0px rgba(73, 93, 76, 0.15);
+
+$clamp-20-32: clamp(20px, 15.78px + 1.13vw, 32px);
+$clamp-28-135: clamp(28px, -9.7px + 10vw, 135px);
+$clamp-50-100: clamp(50px, 32.4px + 4.69vw, 100px);
+$clamp-70-100: clamp(70px, 60px + 2.82vw, 100px);

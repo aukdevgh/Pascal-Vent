@@ -1,0 +1,19 @@
+.logo {
+    width: clamp(168px, 158.144px + 2.63vw, 196px);
+    flex-shrink: 0;
+
+    &:focus,
+    &:hover {
+        .logo__img {
+            transform: scale(0.8);
+        }
+    }
+
+    @media screen and (max-width: 374px) {
+        width: 120px;
+    }
+}
+
+.logo__img {
+    transition: transform 0.1s linear;
+}

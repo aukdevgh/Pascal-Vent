@@ -1,0 +1,93 @@
+.steps {
+    margin-bottom: $clamp-70-100;
+}
+
+.steps__container {
+    margin-left: $clamp-28-135;
+    margin-right: $clamp-28-135;
+    margin-bottom: 90px;
+
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1300px) {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin: 0;
+    }
+}
+
+.steps__title {
+    @media screen and (max-width: 768px) {
+        margin: 0 $clamp-28-135;
+    }
+}
+
+.steps__img {
+    &--mobile {
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        display: none;
+
+        &--mobile {
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
+
+.discount {
+    max-width: 45%;
+
+    @media screen and (max-width: 1300px) {
+        max-width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin: 0 $clamp-28-135;
+    }
+}
+
+.discount__title {
+    margin-bottom: 12px;
+
+    font-size: 26px;
+    color: $color-accent;
+
+    @media screen and (max-width: 374px) {
+        font-size: 20px;
+    }
+}
+
+.discount__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    line-height: normal;
+    color: $green;
+}
+
+.discount__item {
+    display: flex;
+    gap: 10px;
+
+    color: $green;
+
+    &::before {
+        content: '';
+
+        width: 17px;
+        height: 17px;
+
+        display: block;
+        flex-shrink: 0;
+
+        background: url('../img/icons/flower-icon.png') center no-repeat;
+    }
+}

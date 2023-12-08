@@ -1,0 +1,18 @@
+.nav {
+    margin: 0 auto;
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: lowercase;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @media screen and (max-width: 1300px) {
+        flex-direction: column;
+    }
+}

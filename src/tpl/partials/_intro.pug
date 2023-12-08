@@ -1,0 +1,43 @@
+.intro
+    .intro__content
+        h1.intro__title.title
+            |Чистый Воздух
+            span.withDash.withDash--before вместе с
+            em Pascal vent
+        |
+        |
+        .intro__text-wrap
+            img(src="@img/icons/circles.png", alt="круги" height='10' width='50')
+            p.intro__text Проектирование, поставка и монтаж систем вентиляции и кондиционирования
+        |
+        |
+        .intro__contacts
+            address.intro__address.contact.contact--address Московский регион, Москва
+            |
+            |
+            address.intro__phone.contact.contact--phone
+                .intro__phone-container
+                    a.link.contact.contact--phone(href="tel:+74923736331") + 7 492 373 63 31
+                    a.link.contact.contact--phone(href="tel:+74243678929") + 7 424 367 89 29
+        // /intro__contacts
+        button#leaveRequestBtn.intro__btn.btn.btn--lg
+            span.btn__inner Оставить заявку
+    // /intro__content
+    |
+    |
+    .intro__img
+        picture
+            source(media="(max-width: 480px)", srcset="@img/content/img_1--480h.avif", type="image/avif")
+            source(media="(max-width: 480px)", srcset="@img/content/img_1--480h.webp", type="image/webp")
+            source(media="(max-width: 480px)", srcset="@img/content/img_1--480h.jpg")
+            source(media="(max-width: 765px)", srcset="@img/content/img_1--765h.avif", type="image/avif")
+            source(media="(max-width: 765px)", srcset="@img/content/img_1--765h.webp", type="image/webp")
+            source(media="(max-width: 765px)", srcset="@img/content/img_1--765h.jpg")
+            source( srcset="@img/content/img_1--full.avif", type="image/avif")
+            source( srcset="@img/content/img_1--full.webp", type="image/webp")
+            source( srcset="@img/content/img_1--full.jpg")
+            |
+            |
+            img(src="@img/content/img_1--full.jpg", alt="intro bg" width='1640' height='856')
+    // /intro__img
+// /intro

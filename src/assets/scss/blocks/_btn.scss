@@ -1,0 +1,138 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Ruberoid', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $white;
+
+    & .btn__inner {
+        flex-shrink: 0;
+        flex-grow: 1;
+
+        background-color: $btn-active;
+        box-shadow: $shadow;
+
+        transition: background 0.1s linear;
+    }
+
+    &:focus,
+    &:hover {
+        .btn__inner {
+            background-color: $btn-hover;
+        }
+    }
+
+    &:active {
+        .btn__inner {
+            background-color: $btn-active;
+        }
+    }
+
+    &:disabled {
+        .btn__inner {
+            background-color: $btn-disabled;
+            box-shadow: none;
+        }
+    }
+}
+
+.btn--sm {
+    max-width: 210px;
+    width: 100%;
+
+    padding: 10px;
+
+    background-color: $white;
+    border-radius: $radius-20;
+
+    & .btn__inner {
+        padding: 19px;
+
+        display: block;
+        border-radius: $radius-17;
+    }
+
+    @media screen and (max-width: 374px) {
+        padding: 8px;
+    }
+}
+
+.btn--lg {
+    max-width: 477px;
+    width: 100%;
+
+    padding: 15px;
+
+    font-size: 17px;
+    letter-spacing: 0.68px;
+
+    background-color: rgba(120, 192, 129, 0.25);
+    border-radius: $radius-40;
+
+    & .btn__inner {
+        padding: 32px;
+
+        display: block;
+        border-radius: $radius-30;
+
+        @media screen and (max-width: 480px) {
+            padding: 20px;
+        }
+    }
+
+    @media screen and (max-width: 374px) {
+        padding: 8px;
+
+        font-size: 15px;
+
+        & .btn__inner {
+            padding: 10px;
+        }
+    }
+}
+
+.btn__icon {
+    width: 34px;
+    height: 34px;
+
+    fill: $white;
+}
+
+.btn--circle {
+    width: 46px;
+    height: 46px;
+
+    padding: 6px;
+
+    background: rgba(120, 192, 129, 0.25);
+    border-radius: 50%;
+
+    & .btn__inner {
+        width: 34px;
+        height: 34px;
+
+        line-height: 0;
+        border-radius: 50%;
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        background-color: $white;
+
+        .btn__inner {
+            background-color: $white;
+            box-shadow: none;
+        }
+
+        .btn__icon {
+            fill: $green-light;
+        }
+    }
+}

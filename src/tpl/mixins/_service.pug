@@ -1,0 +1,9 @@
+
+mixin service(list)
+    .service
+        ul.service__list
+            each item in list
+                li.service__item
+                    .service__icon
+                        img(src=item.src, alt=item.alt)
+                    .service__text=item.text

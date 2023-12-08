@@ -1,0 +1,52 @@
+@import 'vars';
+@import 'reset';
+@import 'fonts';
+
+/* Default styles */
+
+body {
+    font-family: ProximaNova, sans-serif;
+    font-size: clamp(14px, 13.3px + 0.19vw, 16px);
+    font-weight: 400;
+    line-height: 1.62;
+
+    color: $grey;
+
+    @media screen and (max-width: 480px) {
+        line-height: 1.71;
+    }
+}
+
+[hidden] {
+    display: none;
+}
+
+/* Vendor libs */
+
+/* Blocks */
+@import 'blocks/hidden';
+@import 'blocks/page';
+@import 'blocks/content';
+@import 'blocks/base';
+@import 'blocks/title';
+@import 'blocks/btn';
+@import 'blocks/link';
+@import 'blocks/form';
+@import 'blocks/header';
+@import 'blocks/logo';
+@import 'blocks/nav';
+@import 'blocks/intro';
+@import 'blocks/modal';
+@import 'blocks/withDash';
+@import 'blocks/contact';
+@import 'blocks/services';
+@import 'blocks/service';
+@import 'blocks/solution';
+@import 'blocks/steps';
+@import 'blocks/request';
+@import 'blocks/about';
+@import 'blocks/benefits';
+@import 'blocks/stages';
+@import 'blocks/portfolio';
+@import 'blocks/reviews';
+@import 'blocks/footer';

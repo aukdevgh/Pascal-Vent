@@ -1,0 +1,72 @@
+
+#benefits.benefits.base__flex-container
+    .base__flex-item
+        .benefits__content
+            .benefits__title.title комфорт и Уют #[br] в любое время года
+            |
+            |
+            -
+                var icons = [
+                    {src: '@img/icons/clean-air.png', alt: 'чистый воздух'},
+                    {src: '@img/icons/temperatura.png', alt: 'температура'},
+                    {src: '@img/icons/green-house.png', alt: 'комфортные условия в помещении'},
+                    {src: '@img/icons/unpleasant-odors.png', alt: 'удаление не приятных запахов'},
+                    {src: '@img/icons/humidity.png', alt: 'влажность'},
+                    {src: '@img/icons/pollution.png', alt: 'углекислый газ'},
+                ]
+            ul.benefits__icons-list
+                each icon in icons
+                    li.benefits__icons-item
+                        img.benefits__icon(src=icon.src, alt=icon.alt width='33' height='28' loading='lazy')
+            |
+            |
+            -
+                var conditions = [
+                    'Создание комфортных условий для работы и отдыха',
+                    'Чистый, свежий, приточный воздух круглый год',
+                    'Удаление не приятных запахов, избыточной влажности и накопившегося углекислого газа из помещений',
+                    'Поддержание комфортной температуры и влажности воздуха зимой и летом',
+                ]
+            ul.benefits__conditions-list
+                each condition in conditions
+                    li.confort__conditions-item #[span]
+                        =condition
+            |
+            |
+            p.benefits__text #[strong.special Pascsl Vent] поможет улучшить ваше самочувствие и повысить работоспособность днем, а ночью подарит здоровый и крепкий сон. Это важно для тех, кто следит за своим здоровьем и здоровьем своих близких.
+            |
+            |
+            button#fillOutRequestBtn.btn.btn--lg
+                span.btn__inner заполнить заявку
+
+        // /benefits__content
+    // / base__flex-item
+    -
+        var images = {
+            img_1: {name: 'img_12--1200w', alt: 'кондиционер'},
+            img_2: {name: 'img_14--1200w', alt: 'система вентиляции и кондиционирования'},
+            img_3: {name: 'img_13--1200w', alt: 'труба'},
+            img_4: {name: 'img_15--1200w', alt: 'вентиляция'},
+        }
+    include ../mixins/_block__img.pug
+    .base__flex-item
+        .benefits__images
+            .block
+                .block__item.block__item--1
+                    +block__img(images.img_1)
+                // /.block__item.block__item--1
+                .block__item.block__item--2
+                    +block__img(images.img_2)
+                // /.block__item.block__item--2
+            // /.block
+            .block.block--2
+                .block__item.block__item--2
+                    +block__img(images.img_3)
+                // /.block__item.block__item--2
+                .block__item.block__item--1
+                    +block__img(images.img_4)
+                // /.block__item.block__item--1
+            // /.block.block--2
+        // /.benefits__images
+    // / base__flex-item
+// /benefits

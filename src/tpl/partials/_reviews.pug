@@ -1,0 +1,37 @@
+#reviews.reviews
+    .base__flex-container
+        .base__flex-item
+            .reviews__content
+                h2.reviews__title.title
+                    span.withDash.withDash--after Известные клиенты
+                    |которые нам доверились
+                h2.reviews__title.reviews__title--mobile.title Известные клиенты
+                |
+                |
+                p Реализованы проекты квартир и коммерческих помещений в жилых комплексах от крупных застройщиков таких как: Level, ФСК, MR групп, ПИК, Самолет, Гранель, Донстрой, Пионер, Эталон, А101, Sminex, Vesper, Инград, КРОСТ, МИЦ. Мы ценим каждого клиента #[strong.special Pascal Vent] и с радостью готовы расширять нашу клиентскую базу.
+        |
+        |
+        -
+            var logos = [
+                {src:'@img/logo/MRGroup.png', alt: 'MRGroup'},
+                {src:'@img/logo/Sminex.png', alt: 'Sminex'},
+                {src:'@img/logo/MRGroup.png', alt: 'MRGroup'},
+                {src:'@img/logo/Sminex.png', alt: 'Sminex'},
+            ]
+        .base__flex-item
+            .reviews__slider
+                each logo in logos
+                    .carousel-cell
+                        .reviews__slide
+                            img(src=logo.src, alt=logo.alt width='188' height='40' loading='lazy')
+            // /reviews__slider
+            .reviews__buttons
+                button.btn.btn--circle.reviews__prev-btn(aria-label='предыдущий')
+                    span.btn__inner
+                        svg.btn__icon
+                            use(xlink:href='#prev-icon')
+                button.btn.btn--circle.reviews__next-btn(aria-label='следующий')
+                    span.btn__inner
+                        svg.btn__icon
+                            use(xlink:href='#next-icon')
+// /reviews

@@ -1,0 +1,48 @@
+.request {
+    margin-bottom: $clamp-70-100;
+    padding: 50px 0;
+
+    background: $green-light url('../img/bg/request--bg.jpg') center no-repeat;
+
+    @media screen and (max-width: 768px) {
+        background-image: none;
+    }
+}
+
+.request__container {
+    margin: 0 $clamp-28-135;
+}
+
+.request__title {
+    margin-left: $clamp-28-135;
+    margin-right: $clamp-28-135;
+    margin-bottom: 24px;
+
+    font-size: clamp(28px, 25.54px + 0.66vw, 35px);
+    line-height: clamp(38px, 35.54px + 0.66vw, 45px);
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: 374px) {
+        font-size: 20px;
+    }
+}
+
+.request__form {
+    gap: 30px;
+
+    .form__submit {
+        margin-left: 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 25px;
+
+        .form__submit {
+            margin-left: 0;
+        }
+    }
+}

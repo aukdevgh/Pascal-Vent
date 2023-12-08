@@ -1,0 +1,16 @@
+-
+    var list = [
+        {href: '#services', title: 'Услуги'},
+        {href: '#about', title: 'О нас'},
+        {href: '#benefits', title: 'Польза Продукта'},
+        {href: '#equipment', title: 'Оборудование'},
+        {href: '#stages', title: 'Этапы Работы'},
+        {href: '#reviews', title: 'Отзывы'},
+    ];
+
+
+nav.nav
+    ul.nav__list
+        each item in list
+            li.nav__item
+                a.link(href=item.href ) #{item.title}

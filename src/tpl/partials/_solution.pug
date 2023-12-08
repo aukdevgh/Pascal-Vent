@@ -1,0 +1,49 @@
+section.solution
+
+    h2.solution__title.solution__title--mobile.title
+        |Комплексное решение
+        span.withDash.withDash--before по монтажу и
+        | вентиляции под ключ
+    h2.solution__title.title.title
+        |Комплексное решение по монтажу
+        span.withDash.withDash--after и вентиляции под ключ
+    |
+    |
+    -
+        var list = [
+            {href: '#', name: 'Квартиры и офисы', imgname: 'img_4', price: 'от 100 000 ₽'},
+            {href: '#', name: 'Магазины и ТЦ', imgname: 'img_5', price: 'от 100 000 ₽'},
+            {href: '#', name: 'Фитнес центры', imgname: 'img_6', price: 'от 150 000 ₽'},
+            {href: '#', name: 'Бассейны', imgname: 'img_7', price: 'от 150 000 ₽'},
+            {href: '#', name: 'Загородные дома, коттеджи, таунхаусы', imgname: 'img_8', price: 'от 200 000 ₽'},
+            {href: '#', name: 'Рестораны, кафе, бары', imgname: 'img_9', price: 'от 200 000 ₽'},
+            {href: '#', name: 'Стоматологии, клиники', imgname: 'img_10', price: 'от 200 000 ₽'},
+            {href: '#', name: 'Салоны красоты, СПА', imgname: 'img_11', price: 'от 100 000 ₽'}
+        ]
+    ul.solution__list
+        each item in list
+            li.solution__item
+                span.solution__price= item.price
+                |
+                |
+                a.solution__link(href=item.href aria-label=item.name)
+                    picture
+                        source(media="(min-width: 280px)", srcset=`@img/content/${item.imgname}--480w.avif`, type="image/avif")
+                        source(media="(min-width: 280px)", srcset=`@img/content/${item.imgname}--480w.webp`, type="image/webp")
+                        source(media="(min-width: 280px)", srcset=`@img/content/${item.imgname}--480w.jpg`)
+                        // full-versions
+                        source(srcset=`@img/content/${item.imgname}--1200w.avif`, type="image/avif")
+                        source(srcset=`@img/content/${item.imgname}--1200w.webp`, type="image/webp")
+                        source(srcset=`@img/content/${item.imgname}--1200w.jpg`)
+                        |
+                        |
+                        img.solution__img(src=`@img/content/${item.imgname}--480w.jpg`, alt=item.name  width='257' height='92' loading='lazy')
+                |
+                |
+                .solution__name= item.name
+            |
+            |
+    // /solution__list
+// /solution
+
+

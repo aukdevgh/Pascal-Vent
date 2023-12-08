@@ -1,0 +1,57 @@
+.contact {
+    display: flex;
+    gap: 15px;
+
+    &::before {
+        content: '';
+
+        width: 22px;
+        height: 22px;
+
+        flex-shrink: 0;
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    @media screen and (max-width: 480px) {
+        gap: 12px;
+
+        &::before {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+.contact--phone {
+    &::before {
+        background-image: url('../img/icons/phone.png');
+    }
+}
+
+.contact--mail {
+    &::before {
+        background-image: url('../img/icons/mail.png');
+    }
+}
+
+.contact--calendar {
+    &::before {
+        background-image: url('../img/icons/calendar.png');
+    }
+}
+
+.contact--schedule {
+    &::before {
+        background-image: url('../img/icons/clock.png');
+    }
+}
+
+.contact--address {
+    &::before {
+        width: 24px;
+
+        background-image: url('../img/icons/location.png');
+    }
+}

@@ -1,0 +1,36 @@
+.withDash {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    text-wrap: nowrap;
+
+    @media screen and (max-width: 765px) {
+        gap: 17px;
+    }
+
+    &--before::before {
+        content: '';
+
+        width: 100%;
+
+        display: block;
+        height: 3px;
+
+        background-color: $color-accent;
+        border-radius: 1.5px;
+    }
+    &--after::after {
+        content: '';
+
+        width: 100%;
+
+        display: block;
+        height: 3px;
+
+        background-color: $color-accent;
+        border-radius: 1.5px;
+    }
+}

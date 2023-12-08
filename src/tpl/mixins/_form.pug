@@ -1,0 +1,31 @@
+mixin form(className='')
+    form.form(class=className action="#")
+        .form__group
+            input.name.form__input(
+                type="text"
+                name="name"
+                aria-label='Имя'
+                placeholder='Ваше Имя'
+                minlength="2"
+                maxlength="32"
+                pattern='/^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$/g'
+                title='Не корректное имя'
+                required
+            )
+        |
+        |
+        .form__group
+            input.phone.form__input(
+                type="tel"
+                name="phone"
+                aria-label='Телефон'
+                placeholder='Номер телефона'
+                pattern='/^((\+7)[\- ]?)?(\(?\d\)?[\- ]?){10}$/g'
+                title='Номер не корректный'
+                required
+            )
+            //- small.error Номер не корректный
+        |
+        |
+        button.form__submit.btn.btn--sm(type="submit")
+            span.btn__inner отправить

@@ -1,0 +1,63 @@
+#services.services.base__flex-container
+    .base__flex-item
+        .services__content
+            .services__title.title
+                |Предоставляемые
+                span.withDash.withDash--after услуги
+            |
+            |
+            .services__text
+                p При разработке проекта предложим техническое решение оптимальное по соотношению цены и качества, оно идеально впишется в ваш дизайн, а также будет учитывать все ваши пожелания.
+                p Монтаж выполняется опытными бригадами с соблюдением всех действующих технических норм, правил безопасности и строго по согласованному проекту.
+                p Одинаково эффективно выполняем проектирование и монтаж на объектах любой сложности – от небольшой квартиры, до объектов со сложными технологическими процессами на основе действующей нормативной документации.
+        // /services__content
+    .services__block.base__flex-item
+        .services__types
+            button#vent-btn.services__btn.services__btn--top.active
+                |Система Вентиляции
+                svg.services__btn--icon
+                    use(xlink:href='#fan')
+            button#cond-btn.services__btn.services__btn--bottom
+                |Кондиционирование
+                svg.services__btn--icon
+                    use(xlink:href='#conditioner')
+        |
+        |
+        include ../mixins/_service
+        include ../mixins/_picture.pug
+        #vent-desc.services__desc.active
+            -
+                var vent = {list:[
+                    {src:'@img/icons/design.png', alt:'проектирование', text:'Проектирование систем вентиляции любой сложности'},{src:'@img/icons/cooling.png', alt:'приточная вентиляция', text:'Монтаж приточной вентиляции'},
+                    {src:'@img/icons/hood.png', alt:'вытяжка', text:'Монтаж вытяжной вентиляции'},
+                    {src:'@img/icons/air__humidification.png', alt:'увлажнение', text:'Монтаж вентиляции с увлажнением воздуха'},
+                    {src:'@img/icons/recuperator.png', alt:'рекупиратор', text:'Монтаж вентиляции с рекуператором'},
+                    {src:'@img/icons/dehumidification.png', alt:'осушение', text:'Монтаж вентиляции с осушением для бассейна'}
+                ], img:{srcName: 'img_2', alt: 'вентиляция'}}
+
+            +service(vent.list)
+            |
+            |
+            .services__desc-img
+                +picture(vent.img)
+        // /services__desc
+        #cond-desc.services__desc
+            -
+                var cond = {list:[
+                    {src:'@img/icons/design.png', alt:'проектирование', text:'Проектирование систем кондиционирования'},
+                    {src:'@img/icons/air-conditioner.png', alt:'сплит', text:'Монтаж сплит-систем'},
+                    {src:'@img/icons/multy-split-system.png', alt:'мульти сплит', text:'Монтаж мульти сплит-систем'},
+                    {src:'@img/icons/vrv__vrf-system.png', alt:'VRV и VRF', text:'Монтаж VRV и VRF систем'},
+                    {src:'@img/icons/ceiling.png', alt:'фанкойлы', text:'Монтаж фанкойлов'},
+                    {src:'@img/icons/air-filter.png', alt:'фильтры', text:'Монтаж настенных, канальных и кассетных кондиционеров'}
+                ], img:{srcName: 'img_3', alt: 'кондиционирование'}}
+
+            +service(cond.list)
+            |
+            |
+            .services__desc-img
+                +picture(cond.img)
+        // /services__desc
+    // /services__block
+// /services
+

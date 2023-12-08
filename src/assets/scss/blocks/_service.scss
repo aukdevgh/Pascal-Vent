@@ -40,4 +40,9 @@
 
     background-color: $white;
     border-radius: $radius-10;
+
+    & img {
+        width: 20px;
+        height: 20px;
+    }
 }

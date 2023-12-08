@@ -5,5 +5,5 @@ mixin service(list)
             each item in list
                 li.service__item
                     .service__icon
-                        img(src=item.src, alt=item.alt)
+                        img(src=item.src, alt=item.alt, width='20', height='20')
                     .service__text=item.text

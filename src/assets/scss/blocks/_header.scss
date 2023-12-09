@@ -113,14 +113,29 @@
     @media screen and (max-width: 1300px) {
         display: flex;
     }
+
+    &::after {
+        content: '';
+
+        width: 49px;
+        height: 49px;
+
+        display: block;
+
+        background: url('../img/icons/menu-icon.svg') center no-repeat;
+        background-color: $white;
+        border-radius: $radius-15;
+        box-shadow: 0px 4px 10px 0px rgba(73, 93, 76, 0.15);
+    }
 }
 
 .header__menu-icon {
     width: 49px;
     height: 49px;
 
-    border-radius: $radius-15;
-    box-shadow: 0px 4px 10px 0px rgba(73, 93, 76, 0.15);
+    object-fit: none;
+
+    overflow: hidden;
 }
 
 .open {

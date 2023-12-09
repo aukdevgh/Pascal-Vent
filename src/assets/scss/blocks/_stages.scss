@@ -1,7 +1,7 @@
 .stages {
     margin-bottom: $clamp-70-100;
 
-    background: url('../img/bg/stages-bg.png') center no-repeat;
+    background: url('../img/bg/stages-bg.svg') center no-repeat;
 
     @media screen and (max-width: 768px) {
         background: none;
@@ -63,6 +63,10 @@
             margin-left: auto;
 
             text-align: right;
+
+            & .title {
+                margin-left: auto;
+            }
         }
     }
 
@@ -71,7 +75,7 @@
         margin-bottom: 16px;
 
         &::after {
-            background-image: url('../img/bg/statement-bg.png');
+            background-image: url('../img/bg/statement-bg.svg');
         }
     }
 
@@ -79,7 +83,7 @@
         margin-bottom: 90px;
 
         &::after {
-            background-image: url('../img/bg/consultation-bg.png');
+            background-image: url('../img/bg/consultation-bg.svg');
         }
     }
 
@@ -87,7 +91,7 @@
         margin-bottom: 29px;
 
         &::after {
-            background-image: url('../img/bg/location-bg.png');
+            background-image: url('../img/bg/location-bg.svg');
         }
     }
 
@@ -95,7 +99,7 @@
         margin-bottom: 29px;
 
         &::after {
-            background-image: url('../img/bg/schedule-bg.png');
+            background-image: url('../img/bg/schedule-bg.svg');
         }
     }
 
@@ -103,7 +107,7 @@
         margin-bottom: 85px;
 
         &::after {
-            background-image: url('../img/bg/agreement-bg.png');
+            background-image: url('../img/bg/agreement-bg.svg');
         }
     }
 
@@ -111,7 +115,7 @@
         margin-bottom: 120px;
 
         &::after {
-            background-image: url('../img/bg/delivery-bg.png');
+            background-image: url('../img/bg/delivery-bg.svg');
         }
     }
 
@@ -119,7 +123,7 @@
         margin-bottom: 147px;
 
         &::after {
-            background-image: url('../img/bg/finish-bg.png');
+            background-image: url('../img/bg/finish-bg.svg');
         }
 
         & .stages__content {

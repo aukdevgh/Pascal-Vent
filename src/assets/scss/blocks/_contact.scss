@@ -26,25 +26,25 @@
 
 .contact--phone {
     &::before {
-        background-image: url('../img/icons/phone.png');
+        background-image: url('../img/icons/phone.svg');
     }
 }
 
 .contact--mail {
     &::before {
-        background-image: url('../img/icons/mail.png');
+        background-image: url('../img/icons/mail.svg');
     }
 }
 
 .contact--calendar {
     &::before {
-        background-image: url('../img/icons/calendar.png');
+        background-image: url('../img/icons/calendar.svg');
     }
 }
 
 .contact--schedule {
     &::before {
-        background-image: url('../img/icons/clock.png');
+        background-image: url('../img/icons/clock.svg');
     }
 }
 
@@ -52,6 +52,6 @@
     &::before {
         width: 24px;
 
-        background-image: url('../img/icons/location.png');
+        background-image: url('../img/icons/location.svg');
     }
 }

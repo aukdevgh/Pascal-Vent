@@ -4,7 +4,7 @@
 https://quick-site-upgrade.com/tools/web-font-optimizer
 ********************************************/
 @font-face {
-  font-display: block;
+  font-display: swap;
   font-family: ProximaNova;
   font-style: normal;
   font-weight: 400;
@@ -13,29 +13,11 @@ https://quick-site-upgrade.com/tools/web-font-optimizer
   unicode-range: U+21-23, U+25-40, U+5B-5F, U+7B-7E, U+AB, U+BB, U+401, U+410-44F, U+451, U+2013, U+2014, U+2018, U+2019, U+201C-201E, U+2026, U+20BD;
 }
 @font-face {
-  font-display: block;
-  font-family: ProximaNova;
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/proximanova-regular-english.woff2") format("woff2"), url("../fonts/proximanova-regular-english.woff") format("woff"), url("../fonts/proximanova-regular-english.ttf") format("truetype");
-  text-rendering: optimizeLegibility;
-  unicode-range: U+21-5F, U+61-7E, U+2013, U+2014, U+2018, U+2019, U+201C, U+201D, U+2026;
-}
-@font-face {
-  font-display: block;
+  font-display: swap;
   font-family: Ruberoid;
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/ruberoid-regular-russian.woff2") format("woff2"), url("../fonts/ruberoid-regular-russian.woff") format("woff"), url("../fonts/ruberoid-regular-russian.ttf") format("truetype");
   text-rendering: optimizeLegibility;
   unicode-range: U+21-23, U+25-40, U+5B-5F, U+7B-7E, U+AB, U+BB, U+401, U+410-44F, U+451, U+2013, U+2014, U+2018, U+2019, U+201C-201E, U+2026, U+20BD;
-}
-@font-face {
-  font-display: block;
-  font-family: Ruberoid;
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/ruberoid-regular-english.woff2") format("woff2"), url("../fonts/ruberoid-regular-english.woff") format("woff"), url("../fonts/ruberoid-regular-english.ttf") format("truetype");
-  text-rendering: optimizeLegibility;
-  unicode-range: U+21-5F, U+61-7E, U+2013, U+2014, U+2018, U+2019, U+201C, U+201D, U+2026;
 }

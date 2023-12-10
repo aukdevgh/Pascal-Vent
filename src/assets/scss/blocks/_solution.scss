@@ -1,10 +1,13 @@
 .solution {
-    background: url('../img/bg/solution-bg.png') center center no-repeat;
-
-    @media screen and (max-width: 768px) {
-        background-image: url('../img/bg/solution-bg-mobile.png');
-    }
+    position: relative;
 }
+
+.solution__bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
 .solution__title {
     margin-left: $clamp-28-135;
     margin-right: $clamp-28-135;

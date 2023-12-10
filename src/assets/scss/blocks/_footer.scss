@@ -1,8 +1,13 @@
 .footer {
-    padding-top: $clamp-50-100;
+    position: relative;
 
-    background: #f5f5f5 url('../img/bg/footer-bg.jpg') center no-repeat;
-    background-size: cover;
+    padding-top: $clamp-50-100;
+}
+
+.footer__bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
 }
 
 .footer__container {

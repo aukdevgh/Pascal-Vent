@@ -1,3 +1,5 @@
+document.addEventListener('touchstart', onTouchStart, { passive: true });
+
 import './components/_modal.js';
 import './components/_burger-menu.js';
 import './components/_service-desc.js';

@@ -1,53 +1,49 @@
 #equipment.portfolio
     .portfolio__content.base__flex-container
         .base__flex-item
-            h2.portfolio__title.title Портфолио И  Процесс работы
+            h2.portfolio__title.title.anim-items.anim-no-hide Портфолио И  Процесс работы
         |
         |
-        .base__flex-item
-            p.portfolio__text Технические решения, принятые в рабочих чертежах, соответствуют требованиям экологических, санитарно-гигиенических, противопожарных и других норм и правил, и обеспечивают безопасную для жизни людей эксплуатацию объекта при соблюдении предусмотренных рабочими чертежами мероприятий.
+        .base__flex-item.anim-items.anim-no-hide
+            p.portfolio__text.anim-show Технические решения, принятые в рабочих чертежах, соответствуют требованиям экологических, санитарно-гигиенических, противопожарных и других норм и правил, и обеспечивают безопасную для жизни людей эксплуатацию объекта при соблюдении предусмотренных рабочими чертежами мероприятий.
     // /portfolio__content
 
-    -
-        var portfolioList = [
-            {title: 'приточная вентиляция', text: 'Монтаж приточной вентиляции (объект в Прайм Парк)', img: {srcName: 'img_16', alt:'вентиляция'}},
-            {title: 'приточная вентиляция', text: '', img: {srcName: 'img_17', alt:'вентиляция'}},
-            {title: 'Канальные кондиционеры', text: '', img: {srcName: 'img_18', alt:'кондиционер'}},
-            {title: 'Канальные кондиционеры', text: '', img: {srcName: 'img_19', alt:'кондиционер'}},
-        ]
-    include ../mixins/_picture.pug
     .portfolio__container
         .portfolio__buttons
-            button.btn.btn--circle.portfolio__prev-btn(aria-label='предыдущий')
-                span.btn__inner
-                    svg.btn__icon
-                        use(xlink:href='#prev-icon')
-            button.btn.btn--circle.portfolio__next-btn(aria-label='следующий')
-                span.btn__inner
-                    svg.btn__icon
-                        use(xlink:href='#next-icon')
-        |
-        |
-        .portfolio__slider
+                button.btn.btn--circle.portfolio__prev-btn(aria-label='предыдущий')
+                    span.btn__inner
+                        svg.btn__icon
+                            use(xlink:href='#prev-icon')
+                button.btn.btn--circle.portfolio__next-btn(aria-label='следующий')
+                    span.btn__inner
+                        svg.btn__icon
+                            use(xlink:href='#next-icon')
+        -
+            var portfolio = [
+                {title: 'приточная вентиляция', text: 'Монтаж приточной вентиляции (объект в Прайм Парк)', img: {srcName: 'img_16', alt:'вентиляция'}},
+                {title: 'приточная вентиляция', text: '', img: {srcName: 'img_17', alt:'вентиляция'}},
+                {title: 'Канальные кондиционеры', text: '', img: {srcName: 'img_18', alt:'кондиционер'}},
+                {title: 'Канальные кондиционеры', text: '', img: {srcName: 'img_19', alt:'кондиционер'}},
+            ]
 
-            each item in portfolioList
-                .carousel-cell
-                    .slide
-                        .slide__logo
-                            img(src="@img/logo/logo.svg", alt="Pascla Vent" width='94' height='29' loading='lazy')
-                        |
-                        |
-                        +picture(item.img, 'slide__img')
-                        |
-                        |
-                        .slide__container
-                            h2.slide__title.title= item.title
-                            if item.text
-                                .slide__text= item.text
-                // /carousel-cell
-                |
-                |
-        // /portfolio__slider
+        .portfolio__swiper.swiper
+            .portfolio__swiper-container
+                .swiper-wrapper
+                    each item in portfolio
+                        .portfolio__slide.swiper-slide
+                            .portfolio__slide-logo
+                                img(src="@img/logo/logo.svg", alt="Pascal Vent", width='94', height='29', loading='lazy')
+                            img.portfolio__slide-img(src=`@img/content/${item.img.srcName}--1200w.jpg` alt=item.img.alt width='1200' height='800' loading='lazy')
+
+                            .portfolio__slide-content
+                                h3.portfolio__slide-title.title= item.title
+                                if item.text
+                                    p.portfolio__slide-text= item.text
+
+
+                // /swiper-wrapper
+            // /portfolio__swiper-container
+        // /portfolio__swiper
     // /portfolio__container
 // /portfolio
 

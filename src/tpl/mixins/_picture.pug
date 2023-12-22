@@ -1,4 +1,4 @@
-mixin picture(img, imgClass='')
+mixin picture(img, imgClass='', args)
         picture
             source(media="(max-width: 480px)", srcset=`@img/content/${img.srcName}--480w.avif`, type="image/avif")
             source(media="(max-width: 480px)", srcset=`@img/content/${img.srcName}--480w.webp`, type="image/webp")

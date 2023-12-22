@@ -71,6 +71,8 @@
 
     line-height: normal;
     color: $green;
+
+    overflow: hidden;
 }
 
 .discount__item {
@@ -89,5 +91,24 @@
         flex-shrink: 0;
 
         background: url('../img/icons/cooling.svg') center no-repeat;
+    }
+
+    transform: translate(-200%, 0);
+    opacity: 0;
+
+    &.active {
+        transform: translate(0, 0);
+        opacity: 1;
+
+        @for $var from 1 to 8 {
+            $delay: $var * 0.2;
+            &:nth-child(#{$var}) {
+                @if $var==1 {
+                    transition: transform 0.8s ease 0.3s;
+                } @else {
+                    transition: transform 0.8s ease #{$delay + s};
+                }
+            }
+        }
     }
 }

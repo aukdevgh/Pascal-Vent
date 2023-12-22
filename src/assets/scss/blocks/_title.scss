@@ -12,6 +12,15 @@
 
     color: $green-dark;
 
+    transition: transform 0.8s ease;
+    transform: translate(-120%, -120%);
+    opacity: 0;
+
+    &.active {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
     @media screen and (max-width: 768px) {
         line-height: 1.357;
     }

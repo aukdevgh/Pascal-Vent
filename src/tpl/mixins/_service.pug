@@ -3,7 +3,7 @@ mixin service(list)
     .service
         ul.service__list
             each item in list
-                li.service__item
+                li.service__item.anim-items.anim-no-hide
                     .service__icon
                         img(src=item.src, alt=item.alt, width='20', height='20')
                     .service__text=item.text

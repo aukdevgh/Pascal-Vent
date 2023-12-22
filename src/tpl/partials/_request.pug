@@ -1,9 +1,9 @@
 section.request
-    h2.request__title.title Оставьте заявку и мы с вами свяжемся
+    h2.request__title.title.anim-items.anim-no-hide Оставьте заявку и мы с вами свяжемся
     |
     |
     .request__container
         include ../mixins/_form.pug
-        +form('request__form')
+        +form('request__form anim-items anim-no-hide anim-show')
     // /request__container
 // /request

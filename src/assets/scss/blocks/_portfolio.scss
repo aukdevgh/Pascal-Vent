@@ -54,9 +54,14 @@
 .portfolio__container {
     margin-left: $clamp-28-135;
 
+    @media screen and (max-width: 1439px) {
+        margin-right: $clamp-28-135;
+    }
+
     @media screen and (max-width: 768px) {
         position: relative;
-        margin-right: $clamp-28-135;
+
+        margin-bottom: 70px;
     }
 }
 
@@ -80,58 +85,39 @@
     }
 }
 
-/* ---- Slider ---- */
-.portfolio__slider {
-    @media screen and (max-width: 768px) {
-        margin-bottom: 100px;
-    }
+.portfolio__swiper-container {
+    transition: transform 0.1s linear;
 
-    .carousel-cell {
-        width: fit-content;
-        height: fit-content;
-
-        margin-right: 30px;
-
-        background: $color-accent;
-        border-radius: $radius-35;
-
-        overflow: hidden;
-
-        transition: all 0.3s linear;
-
-        &.is-selected {
-            .slide {
-                width: 500px;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            margin-right: 0;
-
-            &.is-selected {
-                .slide {
-                    max-width: 100vw;
-                    width: 100%;
-                }
-            }
-        }
+    @media screen and (min-width: 1440px) {
+        transform: translateX(-400px);
     }
 }
 
-/* ---- Slide ---- */
-.slide {
+.portfolio__slide {
     position: relative;
-
     width: 270px;
     height: 456px;
 
-    @media screen and (max-width: 768px) {
-        width: 100%;
-        height: 420px;
+    overflow: hidden;
+    border-radius: 35px;
+    background-color: $green-light;
+
+    transition: width 0.2s linear, opacity 0.2s linear;
+
+    &.swiper-slide-active {
+        width: 500px;
+    }
+
+    &.swiper-slide-prev {
+        opacity: 0;
+
+        @media screen and (max-width: 1439px) {
+            opacity: 1;
+        }
     }
 }
 
-.slide__logo {
+.portfolio__slide-logo {
     position: absolute;
     top: 35px;
     left: 0;
@@ -147,11 +133,11 @@
     border-radius: 0px 15px 15px 0px;
 }
 
-.slide__img {
+.portfolio__slide-img {
     height: 100%;
 }
 
-.slide__container {
+.portfolio__slide-content {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -163,7 +149,7 @@
     }
 }
 
-.slide__title {
+.portfolio__slide-title {
     margin: 0;
 
     font-size: 24px;
@@ -176,7 +162,7 @@
     }
 }
 
-.slide__text {
+.portfolio__slide-text {
     margin-top: 10px;
 
     font-size: 16px;

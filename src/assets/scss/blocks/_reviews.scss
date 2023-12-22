@@ -42,7 +42,7 @@
     }
 }
 
-.reviews__slider {
+.reviews__swiper {
     margin-left: $clamp-28-135;
     margin-bottom: 20px;
 
@@ -68,7 +68,7 @@
 }
 
 .reviews__slide {
-    width: 258px;
+    width: fit-content;
     height: 116px;
 
     margin-right: 20px;

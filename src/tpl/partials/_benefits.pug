@@ -2,7 +2,7 @@
 #benefits.benefits.base__flex-container
     .base__flex-item
         .benefits__content
-            .benefits__title.title комфорт и Уют #[br] в любое время года
+            .benefits__title.title.anim-items.anim-no-hide комфорт и Уют #[br] в любое время года
             |
             |
             -
@@ -16,7 +16,7 @@
                 ]
             ul.benefits__icons-list
                 each icon in icons
-                    li.benefits__icons-item
+                    li.benefits__icons-item.anim-items.anim-no-hide.anim-show
                         img.benefits__icon(src=icon.src, alt=icon.alt width='33' height='28' loading='lazy')
             |
             |
@@ -29,11 +29,11 @@
                 ]
             ul.benefits__conditions-list
                 each condition in conditions
-                    li.confort__conditions-item #[span]
+                    li.confort__conditions-item.anim-items.anim-no-hide.anim-show #[span]
                         =condition
             |
             |
-            p.benefits__text #[strong.special Pascsl Vent] поможет улучшить ваше самочувствие и повысить работоспособность днем, а ночью подарит здоровый и крепкий сон. Это важно для тех, кто следит за своим здоровьем и здоровьем своих близких.
+            p.benefits__text.anim-items.anim-no-hide.anim-show #[strong.special Pascsl Vent] поможет улучшить ваше самочувствие и повысить работоспособность днем, а ночью подарит здоровый и крепкий сон. Это важно для тех, кто следит за своим здоровьем и здоровьем своих близких.
             |
             |
             button#fillOutRequestBtn.btn.btn--lg
@@ -52,18 +52,18 @@
     .base__flex-item
         .benefits__images
             .block
-                .block__item.block__item--1
+                .block__item.block__item--1.anim-items.anim-no-hide.anim-show
                     +block__img(images.img_1)
                 // /.block__item.block__item--1
-                .block__item.block__item--2
+                .block__item.block__item--2.anim-items.anim-no-hide.anim-show
                     +block__img(images.img_2)
                 // /.block__item.block__item--2
             // /.block
             .block.block--2
-                .block__item.block__item--2
+                .block__item.block__item--2.anim-items.anim-no-hide.anim-show
                     +block__img(images.img_3)
                 // /.block__item.block__item--2
-                .block__item.block__item--1
+                .block__item.block__item--1.anim-items.anim-no-hide.anim-show
                     +block__img(images.img_4)
                 // /.block__item.block__item--1
             // /.block.block--2

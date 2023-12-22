@@ -1,7 +1,7 @@
 section#stages.stages
 
 
-    h2.stages__title.title Понятная и эффективная схема работы
+    h2.stages__title.title.anim-items.anim-no-hide Понятная и эффективная схема работы
     |
     |
     .stages__container
@@ -26,11 +26,11 @@ section#stages.stages
         ul.stages__list
             each item in stages
                 li.stages__item
-                    .stages__content
-                        h3.stages__subtitle.title= item.title
+                    .stages__content.anim-items.anim-no-hide
+                        h3.stages__subtitle.title.anim-items.anim-no-hide= item.title
                         if item.text
-                            p.stages__text= item.text
-                        img.stages__item-bg(src=item.src, alt=item.title, width=300, height='300', loading='lazy')
+                            p.stages__text.anim-show= item.text
+                        img.stages__item-bg.anim-show(src=item.src, alt=item.title, width=300, height='300', loading='lazy')
     // /stages__container
 // /stages
 

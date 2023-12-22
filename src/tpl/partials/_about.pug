@@ -1,15 +1,15 @@
 #about.about.base__flex-container
     .base__flex-item
         .about__content
-            .about__title.title о нас  #[span Pascal vent]
+            .about__title.title.anim-items.anim-no-hide о нас  #[span Pascal vent]
                 br
                 |Особенности
-            .about__text
-                p Мы любим то, чем занимаемся – поэтому у нас индивидуальный подход к каждому человеку, креативные решения для проекта любой сложности и высокий уровень клиентского сервиса.
+            .about__text.anim-items.anim-no-hide
+                p.anim-show Мы любим то, чем занимаемся – поэтому у нас индивидуальный подход к каждому человеку, креативные решения для проекта любой сложности и высокий уровень клиентского сервиса.
 
-                p  Именно поэтому нам доверяют сложнейшие задачи, рекомендуют нас и возвращаются вновь. Доверьте нам воплощение ваших самых изысканных и технологичных задач, и мы сделаем всё с высочайшим уровнем сервиса #[strong.special Pascal Vent].
+                p.anim-show  Именно поэтому нам доверяют сложнейшие задачи, рекомендуют нас и возвращаются вновь. Доверьте нам воплощение ваших самых изысканных и технологичных задач, и мы сделаем всё с высочайшим уровнем сервиса #[strong.special Pascal Vent].
 
-                p  #[strong.special Pascal Vent] гарантирует сертифицированные современные системы, оборудование, качественные материалы и самые оптимальные решения под любой бюджет.
+                p.anim-show  #[strong.special Pascal Vent] гарантирует сертифицированные современные системы, оборудование, качественные материалы и самые оптимальные решения под любой бюджет.
         // /about__content
 
     -
@@ -23,6 +23,6 @@
         ul.about__achievements
             each item in achievements
                 li.achievement
-                    h3.achievement__title.title= item.title
-                    .achievement__text= item.text
+                    h3.achievement__title.title.anim-items.anim-no-hide= item.title
+                    .achievement__text.anim-items.anim-no-hide.anim-show= item.text
 // /about

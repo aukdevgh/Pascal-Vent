@@ -10,8 +10,21 @@
     background: rgba(217, 250, 221, 0.55);
     backdrop-filter: blur(10px);
 
+    transition: opacity 0.4s linear;
+
+    animation: showAnimation 0.4s;
+
     &.modal--show {
         display: flex;
+    }
+}
+
+@keyframes showAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 

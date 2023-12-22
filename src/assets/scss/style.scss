@@ -21,7 +21,7 @@ body {
 }
 
 /* Vendor libs */
-@import 'vendor/flickity-slider';
+@import 'vendor/swiperjs';
 
 /* Blocks */
 @import 'blocks/hidden';
@@ -32,6 +32,7 @@ body {
 @import 'blocks/btn';
 @import 'blocks/link';
 @import 'blocks/form';
+@import 'blocks/animation';
 @import 'blocks/header';
 @import 'blocks/logo';
 @import 'blocks/nav';

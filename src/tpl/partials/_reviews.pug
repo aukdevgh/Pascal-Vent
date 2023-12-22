@@ -2,13 +2,13 @@
     .base__flex-container
         .base__flex-item
             .reviews__content
-                h2.reviews__title.title
+                h2.reviews__title.title.anim-items.anim-no-hide
                     span.withDash.withDash--after Известные клиенты
                     |которые нам доверились
-                h2.reviews__title.reviews__title--mobile.title Известные клиенты
+                h2.reviews__title.reviews__title--mobile.title.anim-items.anim-no-hide Известные клиенты
                 |
                 |
-                p Реализованы проекты квартир и коммерческих помещений в жилых комплексах от крупных застройщиков таких как: Level, ФСК, MR групп, ПИК, Самолет, Гранель, Донстрой, Пионер, Эталон, А101, Sminex, Vesper, Инград, КРОСТ, МИЦ. Мы ценим каждого клиента #[strong.special Pascal Vent] и с радостью готовы расширять нашу клиентскую базу.
+                p.anim-items.anim-no-hide.anim-show Реализованы проекты квартир и коммерческих помещений в жилых комплексах от крупных застройщиков таких как: Level, ФСК, MR групп, ПИК, Самолет, Гранель, Донстрой, Пионер, Эталон, А101, Sminex, Vesper, Инград, КРОСТ, МИЦ. Мы ценим каждого клиента #[strong.special Pascal Vent] и с радостью готовы расширять нашу клиентскую базу.
         |
         |
         -
@@ -19,12 +19,12 @@
                 {src:'@img/logo/Sminex.png', alt: 'Sminex'},
             ]
         .base__flex-item
-            .reviews__slider
-                each logo in logos
-                    .carousel-cell
-                        .reviews__slide
-                            img(src=logo.src, alt=logo.alt width='188' height='40' loading='lazy')
-            // /reviews__slider
+            .reviews__swiper.swiper
+                .reviews__swiper-container
+                    .swiper-wrapper
+                        each logo in logos
+                            .reviews__slide.swiper-slide
+                                img.reviews__slide-img(src=logo.src, alt=logo.alt, width='188', height='40', loading='lazy')
             .reviews__buttons
                 button.btn.btn--circle.reviews__prev-btn(aria-label='предыдущий')
                     span.btn__inner

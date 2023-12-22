@@ -2,39 +2,39 @@ footer.footer
     img.footer__bg(src="@img/bg/footer-bg.svg", alt="footer-bg", width="1440", height="528", loading='lazy')
     .footer__container
         .footer__content
-            img.footer__logo(src='@img/logo/logo.svg', alt='Pascal Vent fresh air' width='352' height='109' loading='lazy')
+            img.footer__logo.anim-items.anim-no-hide.anim-show(src='@img/logo/logo.svg', alt='Pascal Vent fresh air' width='352' height='109' loading='lazy')
             |
             |
-            .footer__text
-                p Компания #[strong.special "Pascal Vent"] входит в число лучших специализированных организаций, с широким ассортиментом товаров и услуг, предназначенных для систем вентиляции и кондиционирования, предоставляющих высокий сервис и удобство обслуживания нашим клиентам.
+            .footer__text.anim-items.anim-no-hide
+                p.anim-show Компания #[strong.special "Pascal Vent"] входит в число лучших специализированных организаций, с широким ассортиментом товаров и услуг, предназначенных для систем вентиляции и кондиционирования, предоставляющих высокий сервис и удобство обслуживания нашим клиентам.
             |
             |
-            p.footer__tagline.title Чистый воздух вместе с #[span Pascal Vent]
+            p.footer__tagline.title.anim-items.anim-no-hide Чистый воздух вместе с #[span Pascal Vent]
         // /footer__content
         .footer__contacts
-            h3.footer__title.title Контакты
+            h3.footer__title.title.anim-items.anim-no-hide Контакты
             |
             |
             .footer__contacts-container
-                ul.footer__contacts-list
-                    li.footer__contacts-item.underline
+                ul.footer__contacts-list.anim-items.anim-no-hide
+                    li.footer__contacts-item.underline.anim-show
                         a.link.contact.contact--phone(href="tel:+74923736331") + 7 492 373 63 31
-                    li.footer__contacts-item.underline
+                    li.footer__contacts-item.underline.anim-show
                         a.link.contact.contact--phone(href="tel:+74243678929") + 7 424 367 89 29
-                    li.footer__contacts-item.underline
+                    li.footer__contacts-item.underline.anim-show
                         a.link.contact.contact--mail(href="mailto:PascalVent@mail.ru") PascalVent@mail.ru
-                ul.footer__contacts-list
-                    li.footer__contacts-item
+                ul.footer__contacts-list.anim-items.anim-no-hide
+                    li.footer__contacts-item.anim-show
                         .contact.contact--calendar Пн - Сб: 9:00 - 19:00 Вс: выходной
-                    li.footer__contacts-item
+                    li.footer__contacts-item.anim-show
                         address.contact.contact--address Московский регион, Москва ул. Плеханова, 28А
         // /footer__contacts
         .footer__request
-            h3.footer__title.title Заполнить заявку
+            h3.footer__title.title.anim-items.anim-no-hide Заполнить заявку
             |
             |
             include ../mixins/_form.pug
-            +form('footer__form')
+            +form('footer__form anim-items anim-no-hide anim-show')
         // /footer__request
     // /footer__container
 // /footer

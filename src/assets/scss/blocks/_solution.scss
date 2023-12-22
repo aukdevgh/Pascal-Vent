@@ -11,8 +11,6 @@
 .solution__top {
     width: 100%;
 
-    margin-left: $clamp-28-135;
-    margin-right: $clamp-28-135;
     margin-bottom: 85px;
 
     background-color: $white;
@@ -22,6 +20,9 @@
     }
 }
 .solution__title {
+    margin-left: $clamp-28-135;
+    margin-right: $clamp-28-135;
+
     &--mobile {
         display: none;
     }

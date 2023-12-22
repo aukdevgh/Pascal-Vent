@@ -1571,8 +1571,6 @@ body {
 
 .solution__top {
   width: 100%;
-  margin-left: clamp(28px, -9.7px + 10vw, 135px);
-  margin-right: clamp(28px, -9.7px + 10vw, 135px);
   margin-bottom: 85px;
   background-color: #fff;
 }
@@ -1582,6 +1580,10 @@ body {
   }
 }
 
+.solution__title {
+  margin-left: clamp(28px, -9.7px + 10vw, 135px);
+  margin-right: clamp(28px, -9.7px + 10vw, 135px);
+}
 .solution__title--mobile {
   display: none;
 }

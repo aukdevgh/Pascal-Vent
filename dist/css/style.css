@@ -2528,16 +2528,16 @@ body {
   align-items: end;
   background: url("../img/bg/reviews-bg.png") center top no-repeat;
   background-size: contain;
+  overflow: hidden;
 }
 .reviews .base__flex-container {
   padding-bottom: clamp(50px, 32.4px + 4.69vw, 100px);
   background-color: #d9fadd;
 }
-.reviews .base__flex-container .base__flex-item:nth-child(2) {
-  align-self: flex-end;
-}
 
 .reviews__content {
+  max-width: 100vw;
+  width: 100%;
   margin-left: clamp(28px, -9.7px + 10vw, 135px);
 }
 @media screen and (max-width: 1300px) {
@@ -2555,15 +2555,21 @@ body {
 @media screen and (max-width: 480px) {
   .reviews__title {
     display: none;
+    text-wrap: wrap;
   }
   .reviews__title.reviews__title--mobile {
     display: block;
   }
 }
 
+.reviews__text {
+  max-width: 80vw;
+}
+
 .reviews__swiper {
   margin-left: clamp(28px, -9.7px + 10vw, 135px);
   margin-bottom: 20px;
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .reviews__swiper {
@@ -2572,6 +2578,7 @@ body {
 }
 
 .reviews__buttons {
+  max-width: 100vw;
   margin-right: clamp(28px, -9.7px + 10vw, 135px);
   display: flex;
   align-items: center;

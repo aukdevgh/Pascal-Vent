@@ -60,8 +60,33 @@
     flex-direction: column;
     gap: 20px;
 
+    overflow: hidden;
+
     @media screen and (max-width: 768px) {
         margin-bottom: 30px;
+    }
+
+    li {
+        transform: translate(-120%, 0);
+        opacity: 0;
+    }
+
+    &.active {
+        li {
+            transform: translate(0, 0);
+            opacity: 1;
+
+            @for $var from 1 to 5 {
+                $delay: $var * 0.2;
+                &:nth-child(#{$var}) {
+                    @if $var==1 {
+                        transition: transform 0.8s ease 0s;
+                    } @else {
+                        transition: transform 0.8s ease #{$delay + s};
+                    }
+                }
+            }
+        }
     }
 }
 

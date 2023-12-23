@@ -16,6 +16,30 @@
     display: flex;
     flex-direction: column;
     gap: 26px;
+    overflow: hidden;
+
+    p {
+        transform: translate(-120%, 0);
+        opacity: 0;
+    }
+
+    &.active {
+        p {
+            transform: translate(0, 0);
+            opacity: 1;
+
+            @for $var from 1 to 4 {
+                $delay: $var * 0.2;
+                &:nth-child(#{$var}) {
+                    @if $var==1 {
+                        transition: transform 0.8s ease 0s;
+                    } @else {
+                        transition: transform 0.8s ease #{$delay + s};
+                    }
+                }
+            }
+        }
+    }
 }
 
 .services__block {
@@ -147,6 +171,19 @@
     }
     @media screen and (max-width: 600px) {
         display: none;
+    }
+}
+
+.services__btn--icon.fan {
+    animation: fan 2s linear infinite;
+}
+
+@keyframes fan {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 

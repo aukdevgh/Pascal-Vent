@@ -1311,6 +1311,24 @@ body {
   display: flex;
   flex-direction: column;
   gap: 26px;
+  overflow: hidden;
+}
+.services__text p {
+  transform: translate(-120%, 0);
+  opacity: 0;
+}
+.services__text.active p {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.services__text.active p:nth-child(1) {
+  transition: transform 0.8s ease 0s;
+}
+.services__text.active p:nth-child(2) {
+  transition: transform 0.8s ease 0.4s;
+}
+.services__text.active p:nth-child(3) {
+  transition: transform 0.8s ease 0.6s;
 }
 
 .services__block {
@@ -1425,6 +1443,18 @@ body {
   }
 }
 
+.services__btn--icon.fan {
+  animation: fan 2s linear infinite;
+}
+
+@keyframes fan {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .services__desc {
   width: 676px;
   height: 655px;
@@ -1795,6 +1825,7 @@ body {
   display: block;
   flex-shrink: 0;
   background: url("../img/icons/cooling.svg") center no-repeat;
+  animation: fan 2s linear infinite;
 }
 .discount__item.active {
   transform: translate(0, 0);
@@ -1809,19 +1840,15 @@ body {
 .discount__item.active:nth-child(3) {
   transition: transform 0.8s ease 0.6s;
 }
-.discount__item.active:nth-child(4) {
-  transition: transform 0.8s ease 0.8s;
-}
-.discount__item.active:nth-child(5) {
-  transition: transform 0.8s ease 1s;
-}
-.discount__item.active:nth-child(6) {
-  transition: transform 0.8s ease 1.2s;
-}
-.discount__item.active:nth-child(7) {
-  transition: transform 0.8s ease 1.4s;
-}
 
+@keyframes fan {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .request {
   margin-bottom: clamp(70px, 60px + 2.82vw, 100px);
   padding: 50px 0;
@@ -1941,6 +1968,24 @@ body {
   display: flex;
   flex-direction: column;
   gap: 26px;
+  overflow: hidden;
+}
+.about__text p {
+  transform: translate(-120%, 0);
+  opacity: 0;
+}
+.about__text.active p {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.about__text.active p:nth-child(1) {
+  transition: transform 0.8s ease 0s;
+}
+.about__text.active p:nth-child(2) {
+  transition: transform 0.8s ease 0.4s;
+}
+.about__text.active p:nth-child(3) {
+  transition: transform 0.8s ease 0.6s;
 }
 
 .about__achievements {
@@ -2074,11 +2119,32 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .benefits__conditions-list {
     margin-bottom: 30px;
   }
+}
+.benefits__conditions-list li {
+  transform: translate(-120%, 0);
+  opacity: 0;
+}
+.benefits__conditions-list.active li {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.benefits__conditions-list.active li:nth-child(1) {
+  transition: transform 0.8s ease 0s;
+}
+.benefits__conditions-list.active li:nth-child(2) {
+  transition: transform 0.8s ease 0.4s;
+}
+.benefits__conditions-list.active li:nth-child(3) {
+  transition: transform 0.8s ease 0.6s;
+}
+.benefits__conditions-list.active li:nth-child(4) {
+  transition: transform 0.8s ease 0.8s;
 }
 
 .confort__conditions-item {

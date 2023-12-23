@@ -91,6 +91,8 @@
         flex-shrink: 0;
 
         background: url('../img/icons/cooling.svg') center no-repeat;
+
+        animation: fan 2s linear infinite;
     }
 
     transform: translate(-200%, 0);
@@ -100,7 +102,7 @@
         transform: translate(0, 0);
         opacity: 1;
 
-        @for $var from 1 to 8 {
+        @for $var from 1 to 4 {
             $delay: $var * 0.2;
             &:nth-child(#{$var}) {
                 @if $var==1 {
@@ -110,5 +112,14 @@
                 }
             }
         }
+    }
+}
+
+@keyframes fan {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
